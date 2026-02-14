@@ -1,95 +1,79 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" alt="Animation"/>
-  <br>
-  <img alt="Terminal Intro" 
-       src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=6000&pause=500&color=9966CC&bg=F5F5FF&width=650&lines=$+echo+'Hello,+I%27m+Pyasma!';$+echo+'I+build+websites+and+apps';$+node+run_projects.js;All+systems+online!;$+git+status" />
+
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" width="100%" />
+
+  <h1>mykrwt</h1>
+
+  <img 
+    src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=5000&pause=800&color=9966CC&center=true&vCenter=true&width=650&lines=$+whoami;Full-Stack+Engineer;3D+Web+Experiments;Performance-Driven+Systems;Building+without+templates"
+  />
 
   <p>
-    I craft original, high-performance web apps — no templates, no fluff. <br/>
-    Pixels, performance, precision — every line intentional. <br/>
-    <a href="#" target="_blank">
-      <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=appveyor&logoColor=white" alt="Portfolio"/>
-    </a>
-    <a href="https://github.com/Pyasma" target="_blank">
-      <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-    </a>
+    I build original, performance-first digital systems.<br/>
+    No templates. No noise. Just clean architecture & execution.
   </p>
 
-  <!-- Social Badges -->
-  <p>
-    <a href="https://x.com/Pyasma" target="_blank">
-      <img src="https://img.shields.io/badge/-X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/>
-    </a>
-    <a href="https://www.linkedin.com/in/piyush-mudgal" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-    </a>
-  </p>
-  <h3 style="color: #9966CC">💻 Tech Stack</h3>
-
-  <div>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-    <img width="12"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-    <img width="12" />
-    <img src="https://skillicons.dev/icons?i=py" height="30" alt="python logo" />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="30" alt="dart logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="30" alt="figma logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="30" alt="go logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="30" alt="nextjs logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" height="30" alt="graphql logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-    <img width="12" />
-    <img src="https://skillicons.dev/icons?i=express" height="30" alt="express logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" height="30" alt="redis logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="30" alt="postgresql logo"  />
-    <img width="12" />
-    <img src="https://skillicons.dev/icons?i=threejs" height="30" alt="threejs logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="30" alt="firebase logo"  />
-    <img width="12" />
-    <img src="https://skillicons.dev/icons?i=docker" height="30" alt="docker logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="30" alt="kubernetes logo"  />
-    <img width="12" />
-    <img src="https://skillicons.dev/icons?i=kafka" height="30" alt="apachekafka logo"  />
-    <img width="12" />
-    <img src="https://skillicons.dev/icons?i=redux" height="30" alt="redux logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="30" alt="flutter logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="30" alt="gitlab logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" height="30" alt="materialui logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="30" alt="mongodb logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg" height="30" alt="appwrite logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" height="30" alt="fastapi logo"  />
-    <img width="12" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" height="30" alt="vuejs logo"  />
-  </div>
-  <br>
-  <a href="https://buymeacoffee.com/pranyashar4" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 200px !important;" >
-  </a>
 </div>
- 
+
+---
+
+## 🌐 Connect
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/myk.rwt)
+
+---
+
+## 💻 Core Stack
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=#00DC82)
+![Three.js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
+![WebGL](https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white&style=for-the-badge)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+
+---
+
+## 🧠 Extended Tooling
+
+JavaScript • TypeScript • Python • Go • Java  
+PostgreSQL • MongoDB • Redis  
+Docker • Kubernetes • Kafka  
+Git • GitLab • Linux • Windows Terminal  
+GraphQL • Express • FastAPI • Firebase  
+Flutter • Three.js • WebGL  
+
+---
+
+## 📊 GitHub Analytics
+
+![](https://github-readme-stats.vercel.app/api?username=mykrwt&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
+
+![](https://nirzak-streak-stats.vercel.app/?user=mykrwt&theme=dark&hide_border=true)
+
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=dark&hide_border=true&layout=compact)
+
+---
+
+## 🏆 Achievements
+
+![](https://github-profile-trophy.vercel.app/?username=mykrwt&theme=darkhub&no-frame=true&no-bg=true&margin-w=4)
+
+---
+
+## 🔝 Top Contributions
+
+![](https://github-contributor-stats.vercel.app/api?username=mykrwt&limit=5&theme=dark&combine_all_yearly_contributions=true)
+
+---
+
+<div align="center">
+
+  <a href="https://visitcount.itsvg.in">
+    <img src="https://visitcount.itsvg.in/api?id=mykrwt&icon=0&color=0" />
+  </a>
+
+</div>
