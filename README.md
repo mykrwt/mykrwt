@@ -1,53 +1,39 @@
 <div align="center">
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" width="600" />
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" width="100%" style="border-radius: 10px;" />
 
 <br/>
 
-<table width="800">
-<tr>
-<td bgcolor="#161B22" style="border: 1px solid #30363D; border-bottom: none; border-radius: 10px 10px 0 0; padding: 10px;">
-  <img src="https://img.shields.io/badge/●-ff5f56?style=flat-square&labelColor=ff5f56&color=ff5f56" height="12"/> 
-  <img src="https://img.shields.io/badge/●-ffbd2e?style=flat-square&labelColor=ffbd2e&color=ffbd2e" height="12"/> 
-  <img src="https://img.shields.io/badge/●-27c93f?style=flat-square&labelColor=27c93f&color=27c93f" height="12"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <code style="color: #8B949E;">mykrwt — zsh — 80x24</code>
-</td>
-</tr>
-<tr>
-<td bgcolor="#0D1117" style="border: 1px solid #30363D; border-radius: 0 0 10px 10px; padding: 20px;">
-  <pre>
-<font color="#00FF99"><b>➜ ~</b></font> <font color="#FFFFFF">whoami</font>
-<font color="#8B949E">mykrwt | Full-Stack Engineer | Three.js Enthusiast</font>
-
-<font color="#00FF99"><b>➜ ~</b></font> <font color="#FFFFFF">ls skills/</font>
-<font color="#58A6FF">TypeScript.ts  Vue.js  Three.js  WebGL.glsl  Nuxt.config</font>
-
-<font color="#00FF99"><b>➜ ~</b></font> <font color="#FFFFFF">top --status</font>
-<font color="#FFFFFF">Frontend : [███████████] 100%
-Graphics : [█████████░░] 85%
-Backend  : [████████░░░] 75%</font>
-
-<font color="#00FF99"><b>➜ ~</b></font> <font color="#FFFFFF">fetch --stats</font>
-<hr color="#30363D" size="1">
-<font color="#8B949E">System: Optimal | Location: Global | Uptime: ∞</font>
-  </pre>
-</td>
-</tr>
-</table>
+<img src="https://img.shields.io/badge/—_mykrwt_—_zsh_—_80x24-161B22?style=flat&labelColor=161B22&color=161B22&logo=apple&logoColor=8B949E" width="400" />
+<br/>
+<img src="https://img.shields.io/badge/●-ff5f56?style=flat&labelColor=0D1117&color=ff5f56" /><img src="https://img.shields.io/badge/●-ffbd2e?style=flat&labelColor=0D1117&color=ffbd2e" /><img src="https://img.shields.io/badge/●-27c93f?style=flat&labelColor=0D1117&color=27c93f" />
 
 <br/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=github_dark&hide_border=true&show_icons=true&icon_color=00FF99&text_color=FFFFFF&title_color=00FF99" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=github_dark&hide_border=true&layout=compact&text_color=FFFFFF&title_color=00FF99" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=2000&pause=1000&color=00FF99&background=0D1117&center=true&vCenter=true&width=600&height=100&lines=%24+whoami;%3E+mykrwt.dev;%24+status;%3E+Building+in+3D;%24+mission;%3E+Optimize.+Ship.+Repeat." />
+
+</div>
+
+---
+
+### 🛠️ System Overview
+
+* **Main Stack:** `TypeScript` • `Vue` • `Three.js`
+* **Performance:** `100 FPS` (Targeting WebGL)
+* **Current Focus:** `Shader Programming`
 
 <br/>
 
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=00FF99" />
-  <img src="https://img.shields.io/badge/Three.js-0D1117?style=for-the-badge&logo=three.js&logoColor=00FF99" />
-  <img src="https://img.shields.io/badge/WebGL-0D1117?style=for-the-badge&logo=webgl&logoColor=00FF99" />
-  <img src="https://img.shields.io/badge/Nuxt-0D1117?style=for-the-badge&logo=nuxtdotjs&logoColor=00FF99" />
-</p>
+<div align="center">
+
+<img height="150" src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=github_dark&hide_border=true&show_icons=true&icon_color=00FF99&title_color=00FF99&bg_color=0D1117" />
+<img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=github_dark&hide_border=true&layout=compact&title_color=00FF99&bg_color=0D1117" />
+
+<br/><br/>
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=00FF99)](https://www.typescriptlang.org/)
+[![Vue](https://img.shields.io/badge/Vue.js-0D1117?style=for-the-badge&logo=vuedotjs&logoColor=00FF99)](https://vuejs.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-0D1117?style=for-the-badge&logo=three.js&logoColor=00FF99)](https://threejs.org/)
+[![WebGL](https://img.shields.io/badge/WebGL-0D1117?style=for-the-badge&logo=webgl&logoColor=00FF99)](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)
 
 </div>
