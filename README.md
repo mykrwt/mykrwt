@@ -1,39 +1,53 @@
 <div align="center">
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" width="100%" style="border-radius: 10px;" />
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" width="100%" />
 
 <br/>
 
-<img src="https://img.shields.io/badge/—_mykrwt_—_zsh_—_80x24-161B22?style=flat&labelColor=161B22&color=161B22&logo=apple&logoColor=8B949E" width="400" />
-<br/>
-<img src="https://img.shields.io/badge/●-ff5f56?style=flat&labelColor=0D1117&color=ff5f56" /><img src="https://img.shields.io/badge/●-ffbd2e?style=flat&labelColor=0D1117&color=ffbd2e" /><img src="https://img.shields.io/badge/●-27c93f?style=flat&labelColor=0D1117&color=27c93f" />
+<table border="0">
+  <tr>
+    <td bgcolor="#161B22" align="center" style="border: 1px solid #30363D; border-radius: 20px;">
+      <br/>
+      <img src="https://img.shields.io/badge/—_SESSION_ACTIVE_—-0D1117?style=for-the-badge&logo=apple&logoColor=00FF99" />
+      <br/><br/>
+      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00FF99&background=161B22&center=true&vCenter=true&width=500&height=50&lines=%24+init+mykrwt.sys;%3E+Full-Stack+Architect;%3E+Three.js+%2F+WebGL;%3E+Status%3A+Optimizing+the+Web" />
+      <br/>
+    </td>
+  </tr>
+</table>
 
 <br/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=2000&pause=1000&color=00FF99&background=0D1117&center=true&vCenter=true&width=600&height=100&lines=%24+whoami;%3E+mykrwt.dev;%24+status;%3E+Building+in+3D;%24+mission;%3E+Optimize.+Ship.+Repeat." />
+<table border="0">
+  <tr>
+    <td><img height="150" src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=github_dark&hide_border=true&show_icons=true&icon_color=00FF99&title_color=00FF99&bg_color=0D111700" /></td>
+    <td><img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=github_dark&hide_border=true&layout=compact&title_color=00FF99&bg_color=0D111700" /></td>
+  </tr>
+</table>
 
-</div>
+<br/>
+
+### ⚡ KERNEL_DIAGNOSTICS
+
+`CORE_STRENGTHS`
+| **GRAPHICS** | **LOGIC** | **ARCHITECTURE** |
+| :--- | :--- | :--- |
+| `Three.js` • `GLSL` | `TypeScript` • `Node` | `Vue 3` • `Nuxt` |
+| ▓▓▓▓▓▓▓▓▓▓▓░ 95% | ▓▓▓▓▓▓▓▓▓▓▓▓ 100% | ▓▓▓▓▓▓▓▓▓░░░ 80% |
+
+<br/>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,vue,nuxt,threejs,wasm,neovim,figma,vercel&theme=dark" />
+</p>
+
+<br/>
 
 ---
 
-### 🛠️ System Overview
-
-* **Main Stack:** `TypeScript` • `Vue` • `Three.js`
-* **Performance:** `100 FPS` (Targeting WebGL)
-* **Current Focus:** `Shader Programming`
-
-<br/>
-
-<div align="center">
-
-<img height="150" src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=github_dark&hide_border=true&show_icons=true&icon_color=00FF99&title_color=00FF99&bg_color=0D1117" />
-<img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=github_dark&hide_border=true&layout=compact&title_color=00FF99&bg_color=0D1117" />
-
-<br/><br/>
-
-[![TypeScript](https://img.shields.io/badge/TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=00FF99)](https://www.typescriptlang.org/)
-[![Vue](https://img.shields.io/badge/Vue.js-0D1117?style=for-the-badge&logo=vuedotjs&logoColor=00FF99)](https://vuejs.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-0D1117?style=for-the-badge&logo=three.js&logoColor=00FF99)](https://threejs.org/)
-[![WebGL](https://img.shields.io/badge/WebGL-0D1117?style=for-the-badge&logo=webgl&logoColor=00FF99)](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)
+<p align="right">
+  <img src="https://img.shields.io/badge/LOCATION-ENCRYPTED-00FF99?style=flat-square&logoColor=0D1117" />
+  <img src="https://img.shields.io/badge/UPTIME-STABLE-00FF99?style=flat-square&logoColor=0D1117" />
+</p>
 
 </div>
