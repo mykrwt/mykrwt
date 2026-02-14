@@ -2,46 +2,63 @@
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" width="100%" />
 
-<br/>
+<br/><br/>
 
-<svg width="800" height="150" viewBox="0 0 800 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 0H800V150H0V0Z" fill="#0D1117"/>
-  <text x="50%" y="60" text-anchor="middle" fill="#00FF99" font-family="monospace" font-size="40" font-weight="bold" letter-spacing="0.2em">MYKRWT</text>
-  <text x="50%" y="100" text-anchor="middle" fill="#8B949E" font-family="monospace" font-size="14" letter-spacing="0.5em">FULL-STACK // 3D ARCHITECT</text>
-  <rect x="250" y="125" width="300" height="1" fill="#30363D"/>
+<svg width="800" height="120" viewBox="0 0 800 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="50" fill="#00FF99" font-family="monospace" font-size="50" font-weight="900" style="letter-spacing: -2px;">MYKRWT</text>
+  <text x="0" y="90" fill="#8B949E" font-family="monospace" font-size="14" style="letter-spacing: 4px;">FULL-STACK // GRAPHICS // OPTIMIZATION</text>
+  <rect x="0" y="110" width="800" height="1" fill="#30363D"/>
 </svg>
 
 <br/>
 
-<div align="left" style="width: 800px; font-family: monospace;">
-<p>
-<font color="#00FF99"><b>[info]</b></font> initializing_core_engine... <br/>
-<font color="#00FF99"><b>[info]</b></font> loading_modules: [three.js, glsl, typescript, vue3, rust] <br/>
-<font color="#00FF99"><b>[info]</b></font> status: <font color="#00FF99">operational</font>
-</p>
+<div align="left" style="width: 800px;">
+  <p>
+    <code><b>[MODE]</b> DEVELOPMENT</code> &nbsp;&nbsp; 
+    <code><b>[STACK]</b> TS/VUE/THREE</code> &nbsp;&nbsp; 
+    <code><b>[PING]</b> 12MS</code> &nbsp;&nbsp; 
+    <code><b>[STATUS]</b> OPERATIONAL</code>
+  </p>
 </div>
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=transparent&hide_border=true&layout=compact&title_color=00FF99&text_color=8B949E&bg_color=0D111700&langs_count=6" height="150" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=transparent&hide_border=true&show_icons=true&icon_color=00FF99&title_color=00FF99&text_color=8B949E&bg_color=0D111700" height="150" />
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=ts,vue,nuxt,threejs,wasm,neovim&theme=dark" />
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=mykrwt&bg_color=0D1117&color=00FF99&line=00FF99&point=0D1117&area=true&hide_border=true&hide_title=true" width="800" />
+<table border="0" width="800" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" valign="top">
+      <h3 style="color: #00FF99;">// TRANSMISSION</h3>
+      <p style="color: #8B949E; font-size: 14px;">
+        Engineering high-fidelity 3D<br/>
+        environments for the modern web.<br/>
+        Focusing on WebGL performance<br/>
+        and shader architecture.
+      </p>
+    </td>
+    <td align="right">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=transparent&hide_border=true&layout=compact&title_color=00FF99&text_color=FFFFFF&bg_color=0D111700&langs_count=5" height="140" />
+    </td>
+  </tr>
+</table>
 
 <br/>
 
-<table border="0" width="800">
-  <tr>
-    <td align="left"><font color="#30363D" face="monospace" size="2">v2.6.0_stable</font></td>
-    <td align="right"><font color="#30363D" face="monospace" size="2">ping_local: 0.04ms</font></td>
-  </tr>
-</table>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=mykrwt&bg_color=0D1117&color=00FF99&line=00FF99&point=0D1117&area=true&hide_border=true&hide_title=true&height=120" width="800" />
+
+<br/>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,vue,nuxt,threejs,wasm,neovim,docker,figma&theme=dark" />
+</p>
+
+<br/>
+
+<div align="center" style="border-top: 1px solid #30363D; padding-top: 10px; width: 800px;">
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><code>VER: 2.6.0_STABLE</code></td>
+      <td align="right"><code>© 2026 // MYKRWT</code></td>
+    </tr>
+  </table>
+</div>
 
 </div>
