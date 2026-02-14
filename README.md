@@ -6,38 +6,56 @@
 
 <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
   <tr>
-    <td bgcolor="#161B22" style="border: 1px solid #30363D; border-radius: 10px 10px 0 0; padding: 12px 15px;">
-      <img src="https://img.shields.io/badge/●-ff5f56?style=flat-square&labelColor=ff5f56&color=ff5f56" height="12"/> 
-      <img src="https://img.shields.io/badge/●-ffbd2e?style=flat-square&labelColor=ffbd2e&color=ffbd2e" height="12"/> 
-      <img src="https://img.shields.io/badge/●-27c93f?style=flat-square&labelColor=27c93f&color=27c93f" height="12"/>
-      &nbsp;&nbsp;&nbsp; <code style="color: #8B949E; font-family: monospace;">zsh — session — 80×24</code>
+    <td bgcolor="#161B22" style="border: 1px solid #30363D; border-radius: 12px 12px 0 0; padding: 14px 18px;">
+      <span style="display:inline-block;width:12px;height:12px;background:#ff5f56;border-radius:50%;margin-right:6px;"></span>
+      <span style="display:inline-block;width:12px;height:12px;background:#ffbd2e;border-radius:50%;margin-right:6px;"></span>
+      <span style="display:inline-block;width:12px;height:12px;background:#27c93f;border-radius:50%;"></span>
     </td>
   </tr>
+
   <tr>
-    <td bgcolor="#0D1117" style="border: 1px solid #30363D; border-top: none; border-radius: 0 0 10px 10px; padding: 25px;">
+    <td bgcolor="#0D1117" style="border: 1px solid #30363D; border-top: none; border-radius: 0 0 12px 12px; padding: 30px;">
       <div align="left">
-        <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=4000&pause=10000000&color=00FF99&background=0D1117&width=700&height=180&lines=NAME%3A+mykrwt;SPECS%3A+Full-Stack+%2F%2F+3D+Creative;STACK%3A+TS+%7C+Vue+%7C+Three.js;BUILD%3A+0x7FFF12B;LOAD%3A+%5B%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%5D+100%25;STATUS%3A+SYNCHRONIZED" />
+
+<pre style="color:#00FF99;font-family:monospace;font-size:15px;line-height:1.6;">
+
+> whoami
+mykrwt
+
+> role
+Full-Stack Engineer / 3D Web Creative
+
+> focus
+High-performance web apps
+Immersive 3D experiences
+Scalable backend systems
+
+> stack
+TypeScript | Vue | Nuxt | Three.js
+Node | MongoDB | PostgreSQL
+Docker | Linux | WASM
+
+> current_build
+Building interactive web + experimental UI systems
+
+> mindset
+Ship fast. Refactor smart.
+Performance > Hype
+Consistency > Motivation
+
+> status
+SYNCHRONIZED
+</pre>
+
       </div>
     </td>
   </tr>
 </table>
 
-<br/>
-
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=mykrwt&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&area=true&hide_border=true&hide_title=true&height=140" width="100%" />
 
-<br/>
-
-<div align="center" style="margin-top: -10px;">
-  <img src="https://skillicons.dev/icons?i=ts,vue,nuxt,threejs,wasm,neovim,docker,figma,v8,linux,mongodb,postgres&theme=dark&perline=12" />
-</div>
-
-<br/>
-
----
-
 <div align="center">
-  <code><b>[ TERMINAL_ENCRYPTED ]</b></code> &nbsp; <code><b>LOC: GLOBAL_NET</b></code> &nbsp; <code><b>2026.v2</b></code>
+  <img src="https://skillicons.dev/icons?i=ts,vue,nuxt,threejs,wasm,neovim,docker,figma,v8,linux,mongodb,postgres&theme=dark&perline=12" />
 </div>
 
 </div>
