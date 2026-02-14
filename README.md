@@ -4,74 +4,55 @@
 
 <br/>
 
-<svg width="800" height="150" viewBox="0 0 800 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="150" fill="#0D1117"/>
-  <text x="20" y="70" fill="#00FF99" font-family="monospace" font-size="60" font-weight="900" style="letter-spacing: -3px;">MYKRWT</text>
-  <text x="22" y="110" fill="#8B949E" font-family="monospace" font-size="16" style="letter-spacing: 8px;">FULL-STACK // GRAPHICS // OPTIMIZATION</text>
-  <rect x="20" y="130" width="760" height="1" fill="#30363D"/>
-  <circle cx="770" cy="30" r="5" fill="#FF5F56" />
-  <circle cx="750" cy="30" r="5" fill="#FFBD2E" />
-  <circle cx="730" cy="30" r="5" fill="#27C93F" />
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0.5" y="0.5" width="799" height="199" rx="19.5" fill="#0D1117" stroke="#30363D"/>
+  
+  <text x="30" y="60" fill="#00FF99" font-family="monospace" font-size="50" font-weight="900" style="letter-spacing: -2px;">MYKRWT_SYS</text>
+  <rect x="30" y="80" width="400" height="2" fill="#00FF99" fill-opacity="0.3"/>
+  
+  <text x="30" y="110" fill="#8B949E" font-family="monospace" font-size="12">CORE: v2.6.0-stable</text>
+  <text x="30" y="130" fill="#8B949E" font-family="monospace" font-size="12">MEM: 128TB_VIRTUAL</text>
+  <text x="30" y="150" fill="#8B949E" font-family="monospace" font-size="12">LINK: ENCRYPTED_SSL</text>
+
+  <circle cx="700" cy="100" r="60" stroke="#30363D" stroke-width="1" stroke-dasharray="5 5"/>
+  <circle cx="700" cy="100" r="40" stroke="#00FF99" stroke-width="2" stroke-opacity="0.5"/>
+  <line x1="700" y1="40" x2="700" y2="160" stroke="#30363D" />
+  <line x1="640" y1="100" x2="760" y2="100" stroke="#30363D" />
+  
+  <rect x="640" y="70" width="120" height="2" fill="#00FF99">
+    <animate attributeName="y" values="40;160;40" dur="3s" repeatCount="indefinite" />
+  </rect>
 </svg>
 
 <br/>
 
-<table width="800" border="0" cellpadding="0" cellspacing="0">
+<table width="800" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="60%" valign="top">
-      <div align="left" style="font-family: monospace; border-left: 2px solid #00FF99; padding-left: 20px;">
-        <p><font color="#00FF99"><b>[SESSION]</b></font> <font color="#FFFFFF">Active: 2026.02.14</font></p>
-        <p><font color="#00FF99"><b>[OBJECTIVE]</b></font> <font color="#8B949E">Building low-latency 3D web architectures.</font></p>
-        <p><font color="#00FF99"><b>[LOCATION]</b></font> <font color="#8B949E">Global / Decentralized</font></p>
-        <p><font color="#00FF99"><b>[LICENSE]</b></font> <font color="#8B949E">MIT_V2.0</font></p>
-      </div>
-    </td>
-    <td width="40%" align="right">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=transparent&hide_border=true&layout=compact&title_color=00FF99&text_color=8B949E&bg_color=0D111700&langs_count=6" height="160" />
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<table width="800" border="0" cellpadding="10" cellspacing="0" bgcolor="#161B22" style="border: 1px solid #30363D; border-radius: 8px;">
-  <tr>
-    <td align="center">
-      <font color="#00FF99" face="monospace"><b>CORE_ENGINE</b></font><br/>
-      <img src="https://skillicons.dev/icons?i=ts,vue,nuxt,threejs,wasm&theme=dark" />
-    </td>
-    <td align="center">
-      <font color="#00FF99" face="monospace"><b>PIPELINE</b></font><br/>
-      <img src="https://skillicons.dev/icons?i=docker,github,vercel,neovim,linux&theme=dark" />
-    </td>
-    <td align="center">
-      <font color="#00FF99" face="monospace"><b>DESIGN</b></font><br/>
-      <img src="https://skillicons.dev/icons?i=figma,blender,ps&theme=dark" />
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<div align="left" style="width: 800px; font-family: monospace; color: #00FF99;">
-  <code><b>// COMMIT_WAVEFORM</b></code>
-</div>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=mykrwt&bg_color=0D1117&color=00FF99&line=00FF99&point=0D1117&area=true&hide_border=true&hide_title=true&height=150" width="800" />
-
-<br/>
-
-<table width="800" border="0" cellpadding="10" cellspacing="0">
-  <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=transparent&hide_border=true&show_icons=true&icon_color=00FF99&title_color=00FF99&text_color=8B949E&bg_color=0D111700" height="150" />
-    </td>
-    <td valign="middle" align="left">
-      <font color="#00FF99" face="monospace"><b>[LOG_OUTPUT]</b></font><br/>
+    <td width="33%" valign="top" style="border-right: 1px solid #30363D; padding: 10px;">
+      <font color="#00FF99" face="monospace" size="4"><b>//01_FRONTEND</b></font><br/>
       <font color="#8B949E" face="monospace" size="2">
-      > optimizing_glsl_shaders... DONE<br/>
-      > refactoring_vue_components... DONE<br/>
-      > deploying_nuxt_edge... ONLINE<br/>
-      > syncing_3D_assets... 100%
+      - Vue 3 (Composition)<br/>
+      - Nuxt.js (SSR/Edge)<br/>
+      - Tailwind / SCSS<br/>
+      - WASM Integration
+      </font>
+    </td>
+    <td width="33%" valign="top" style="border-right: 1px solid #30363D; padding: 10px;">
+      <font color="#00FF99" face="monospace" size="4"><b>//02_GRAPHICS</b></font><br/>
+      <font color="#8B949E" face="monospace" size="2">
+      - Three.js / WebGL<br/>
+      - GLSL Shaders<br/>
+      - Blender / 3D Pipelines<br/>
+      - Canvas Optimization
+      </font>
+    </td>
+    <td width="33%" valign="top" style="padding: 10px;">
+      <font color="#00FF99" face="monospace" size="4"><b>//03_BACKEND</b></font><br/>
+      <font color="#8B949E" face="monospace" size="2">
+      - Node.js / Runtime<br/>
+      - Rust (Performance)<br/>
+      - PostgreSQL / Redis<br/>
+      - Docker / CI-CD
       </font>
     </td>
   </tr>
@@ -79,14 +60,29 @@
 
 <br/>
 
----
+<div align="left" style="width: 800px; background: #161B22; border: 1px solid #30363D; border-radius: 5px; padding: 15px;">
+  <pre style="margin: 0;">
+<font color="#00FF99"><b>[LIVE_STATS]</b></font> 
+<img src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=transparent&hide_border=true&show_icons=true&icon_color=00FF99&title_color=00FF99&text_color=FFFFFF&bg_color=0D111700" height="150" align="right" />
+<font color="#8B949E">> Fetching user metadata...</font> SUCCESS
+<font color="#8B949E">> Analyzing commit frequency...</font> OPTIMAL
+<font color="#8B949E">> Verifying build integrity...</font> STABLE
+<font color="#8B949E">> Current Load:</font> [##########----------] 50%
+  </pre>
+</div>
 
-<table width="800" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td align="left"><code><b>BUILD:</b> 0xDEADBEEF</code></td>
-    <td align="center"><code><b>STATUS:</b> <font color="#00FF99">ONLINE</font></code></td>
-    <td align="right"><code><b>PING:</b> 4MS</code></td>
-  </tr>
-</table>
+<br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=mykrwt&bg_color=0D1117&color=00FF99&line=00FF99&point=FFFFFF&area=true&hide_border=true&hide_title=true&height=140" width="800" />
+
+<br/>
+
+<div align="center" style="width: 800px; border-top: 1px solid #30363D; padding-top: 20px;">
+  <img src="https://img.shields.io/badge/LINKEDIN-00FF99?style=for-the-badge&logo=linkedin&logoColor=0D1117" />
+  <img src="https://img.shields.io/badge/SOURCE_CODE-0D1117?style=for-the-badge&logo=github&logoColor=00FF99" />
+  <img src="https://img.shields.io/badge/NETWORK_STATUS-SECURE-00FF99?style=for-the-badge&logo=wireshark&logoColor=0D1117" />
+</div>
+
+<br/>
 
 </div>
