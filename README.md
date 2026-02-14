@@ -8,54 +8,48 @@
 
 ---
 
-## 🖥 Terminal
+<div align="center">
 
-<div>
-
-<pre>
-┌─────────────────────────────────────────────┐
-│ mykrwt@github:~$ whoami                    │
-│ Full-Stack Engineer                         │
-│                                             │
-│ mykrwt@github:~$ focus                      │
-│ 3D Web • Performance Systems • Clean Code  │
-│                                             │
-│ mykrwt@github:~$ stack                      │
-│ TypeScript • Vue • Nuxt • Three.js         │
-│ Supabase • PostgreSQL • Docker             │
-│                                             │
-│ mykrwt@github:~$ philosophy                 │
-│ Build from scratch. Ship fast. Optimize.   │
-└─────────────────────────────────────────────┘
-</pre>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=3500&pause=800&color=00FF99&background=1E1E1EFF&center=true&vCenter=true&width=750&height=180&lines=mykrwt%40github:~%24+whoami;Full-Stack+Engineer;3D+Web+Systems+%7C+Performance+Focus;TypeScript+%7C+Vue+%7C+Three.js;Ship.+Optimize.+Repeat." />
 
 </div>
 
 ---
 
-## 🚀 Core Stack
+## 🚀 Stack
+
+<div align="center">
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
-![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=#00DC82)
+![Vue](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=00DC82)
 ![Three.js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 ![WebGL](https://img.shields.io/badge/WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
 
+</div>
+
 ---
 
 ## 📊 GitHub Stats
 
-![](https://github-readme-stats.vercel.app/api?username=mykrwt&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
+<div align="center">
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=dark&hide_border=true&layout=compact)
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=mykrwt&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true" />
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mykrwt&theme=github_dark&hide_border=true&layout=compact" />
+
+</div>
 
 ---
 
 ## 🌐 Connect
 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/myk.rwt)
+<div align="center">
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/myk.rwt)
+
+</div>
 
 ---
 
