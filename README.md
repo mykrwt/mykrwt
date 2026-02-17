@@ -21,9 +21,11 @@ paragraph
 Socials
 -->
 
-    <a href="https://bilota.vercel.app" target="_blank">
+<a href="https://bilota.vercel.app" target="_blank">
       <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=appveyor&logoColor=black" alt="Portfolio"/>
-    </a>
+
+
+</a>
     <a href="https://GitHub.com/mykrwt" target="_blank">
       <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
     </a>
