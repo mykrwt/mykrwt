@@ -1,12 +1,25 @@
 <div align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Nsd3J2Ynl5NDZvNWk3aG4yajVlejBxYnlzcjUwaXRkMzhkY280bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NKEt9elQ5cR68/giphy.gif" alt="Animation"/>
   <br>
+
+<!--
+terminal  effect
+-->
   <img alt="Terminal Intro" 
        src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=6000&pause=500&color=9966CC&bg=F5F5FF&width=650&lines=$+echo+'Hello,+I%27m+bilota!';$+echo+'I+build+websites+and+apps';$+node+run_projects.js;All+systems+online!;$+git+status" />
+
+<!--
+paragraph
+-->
 
   <p>
     I craft original, high-performance web apps — no templates, no fluff. <br/>
     Pixels, performance, precision — every line intentional. <br/>
+
+<!--
+Socials
+-->
+
     <a href="https://bilota.vercel.app" target="_blank">
       <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=appveyor&logoColor=black" alt="Portfolio"/>
     </a>
@@ -14,6 +27,10 @@
       <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
     </a>
   </p>
+
+<!--------
+tech stack
+--------->
 
   <h3 style="color: #9966CC">💻 Tech Stack</h3>
 
