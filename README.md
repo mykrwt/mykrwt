@@ -15,6 +15,7 @@ paragraph
   <p>
     I craft original, high-performance web apps — no templates, no fluff. <br/>
     Pixels, performance, precision — every line intentional. <br/>
+</p>
 
 <!--
 Socials
@@ -26,7 +27,6 @@ Socials
     <a href="https://GitHub.com/mykrwt" target="_blank">
       <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
     </a>
-  </p>
 
 <!--------
 tech stack
