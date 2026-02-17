@@ -6,7 +6,7 @@
 terminal  effect
 -->
   <img alt="Terminal Intro" 
-       src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=6000&pause=500&color=9966CC&bg=F5F5FF&width=650&lines=$+echo+'Hello,+I%27m+bilota!';$+echo+'I+build+websites+and+apps';$+node+run_projects.js;All+systems+online!;$+git+status" />
+       src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=6000&pause=500&color=9966CC&bg=F5F5FF&width=650&lines=$+echo+'Hello,+I%27m+bilota!';$+echo+'I+build+websites+and+apps';$+node+run_projects.js;All+systems+online!;$+git+status" style="color: grey" />
 
 <!--
 paragraph
