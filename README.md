@@ -1,36 +1,34 @@
-# Web Developer Portfolio
+# mykrwt portfolio and blog
 
-A clean, responsive single-page portfolio built with vanilla HTML, CSS, and
-JavaScript. Uses a minimalist **black / grey / white** color palette.
-
-## Features
-
-- Fixed navigation with scroll-aware background, active-link highlighting, and
-  a mobile slide-in menu
-- Animated hero with a subtle grid backdrop and scroll indicator
-- Scroll-reveal animations (respects `prefers-reduced-motion`)
-- Scroll progress bar
-- Sections: About, Skills, Selected Work, Contact
-- Fully responsive, no build step required
-
-## Structure
-
-```
-index.html   Markup and content
-styles.css   Styling and the color palette (see :root variables)
-script.js    Navigation, scroll effects, and reveal animations
-```
+A responsive vanilla HTML/CSS/JavaScript portfolio with a content system managed from Telegram. The public blog is rendered from `data/posts.json`; no template code needs to change when publishing.
 
 ## Run locally
 
-Any static server works, e.g.:
-
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+npm start
+# open http://localhost:8000
 ```
 
-## Customize
+The blog page uses `/api/posts` and `/api/heatmap`. Use a Node 18+ runtime.
 
-Update your name, copy, projects, and links directly in `index.html`.
-Tweak colors in the `:root` block at the top of `styles.css`.
+## Telegram blog manager
+
+1. Create a bot with BotFather and copy its token.
+2. Find your numeric Telegram chat ID and set `TELEGRAM_ADMIN_CHAT_ID`.
+3. Copy `.env.example` to `.env` and export those values in your host environment.
+4. Deploy the server, then set the webhook:
+
+```bash
+curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/setWebhook?url=https://your-domain.com/telegram/webhook"
+```
+
+Commands supported by the private bot:
+
+- `/new Title | Excerpt | Full article text | tag1,tag2` creates a draft
+- `/publish post-slug` makes a draft public
+- `/draft post-slug` unpublishes it
+- `/posts` lists post slugs and status
+- `/delete post-slug` removes a post
+- `/help` shows the command format
+
+Keep `data/posts.json` on persistent storage. The admin chat ID is checked before any write operation, and the bot token must stay in environment variables.

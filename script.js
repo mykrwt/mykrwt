@@ -24,11 +24,11 @@ onScroll();
 const toggle = document.getElementById('navToggle');
 const links = document.getElementById('navLinks');
 
-toggle.addEventListener('click', () => {
+if (toggle && links) toggle.addEventListener('click', () => {
   const open = links.classList.toggle('open');
   toggle.classList.toggle('open', open);
 });
-links.querySelectorAll('a').forEach((a) =>
+if (links) links.querySelectorAll('a').forEach((a) =>
   a.addEventListener('click', () => {
     links.classList.remove('open');
     toggle.classList.remove('open');
