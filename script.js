@@ -69,6 +69,48 @@ const spyObserver = new IntersectionObserver(
 );
 sections.forEach((s) => spyObserver.observe(s));
 
+// GitHub contribution activity (home page)
+function renderGithubHeatmap(counts, total, username) {
+  const heatmap = document.getElementById('githubHeatmap');
+  const totalEl = document.getElementById('githubTotal');
+  if (!heatmap) return;
+
+  const today = new Date();
+  today.setHours(12, 0, 0, 0);
+  const cells = [];
+  for (let i = 363; i >= 0; i -= 1) {
+    const date = new Date(today);
+    date.setDate(today.getDate() - i);
+    const key = date.toISOString().slice(0, 10);
+    const count = counts[key] || 0;
+    const cell = document.createElement('span');
+    cell.className = `heat-cell level-${Math.min(count, 4)}`;
+    cell.title = `${count} contribution${count === 1 ? '' : 's'} on ${key}`;
+    cell.setAttribute('aria-label', cell.title);
+    cells.push(cell);
+  }
+  heatmap.replaceChildren(...cells);
+  if (totalEl) {
+    totalEl.textContent = `${total.toLocaleString()} contributions`;
+    totalEl.title = `Public contributions by ${username}`;
+  }
+}
+
+const githubHeatmap = document.getElementById('githubHeatmap');
+if (githubHeatmap) {
+  fetch('/api/github-contributions')
+    .then((response) => {
+      if (!response.ok) throw new Error('GitHub activity unavailable');
+      return response.json();
+    })
+    .then((activity) => renderGithubHeatmap(activity.counts || {}, activity.total || 0, activity.username || 'mykrwt'))
+    .catch(() => {
+      githubHeatmap.innerHTML = '<span class="heatmap-status">GitHub activity is unavailable right now.</span>';
+      const totalEl = document.getElementById('githubTotal');
+      if (totalEl) totalEl.textContent = 'Unavailable';
+    });
+}
+
 // Newsletter form (blog page only)
 const newsletterForm = document.getElementById('newsletterForm');
 if (newsletterForm) {

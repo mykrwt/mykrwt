@@ -49,6 +49,33 @@ const server = http.createServer(async (req, res) => {
     const posts = publicPosts(); const counts = {}; posts.forEach(p => { counts[p.date] = (counts[p.date] || 0) + 1; });
     return json(res, 200, { counts, total: posts.length });
   }
+  if (url.pathname === '/api/github-contributions' && req.method === 'GET') {
+    const username = process.env.GITHUB_USERNAME || 'mykrwt';
+    try {
+      const response = await fetch(`https://github.com/users/${encodeURIComponent(username)}/contributions` , {
+        headers: { 'user-agent': 'mykrwt-portfolio' }
+      });
+      if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+      const html = await response.text();
+      const counts = {};
+      const tooltipCounts = {};
+      // GitHub exposes each contribution day as a table cell. Keep the parsing
+      // on the server so the browser does not need to make a cross-origin request.
+      html.replace(/<tool-tip[^>]*for="([^"]+)"[^>]*>(\d+) contribution/g, (_, id, count) => {
+        tooltipCounts[id] = Number(count);
+        return _;
+      });
+      html.replace(/<td\b([^>]*data-date="([^"]+)"[^>]*)><\/td>/g, (_, cell, date) => {
+        const idMatch = cell.match(/id="([^"]+)"/);
+        const levelMatch = cell.match(/data-level="(\d+)"/);
+        counts[date] = Number((idMatch && tooltipCounts[idMatch[1]]) || (levelMatch && levelMatch[1]) || 0);
+        return _;
+      });
+      return json(res, 200, { counts, total: Object.values(counts).reduce((sum, count) => sum + count, 0), username });
+    } catch (error) {
+      return json(res, 502, { error: 'GitHub contributions are unavailable.', username });
+    }
+  }
   if (url.pathname === '/telegram/webhook' && req.method === 'POST') { try { const update = await body(req); if (update.message) telegramCommand(update.message.text, update.message.chat.id); json(res, 200, { ok: true }); } catch { json(res, 400, { ok: false }); } return; }
   const requested = url.pathname === '/' ? '/index.html' : url.pathname;
   const file = path.resolve(ROOT, '.' + requested);
