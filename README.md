@@ -9,7 +9,7 @@ npm start
 # open http://localhost:8000
 ```
 
-The blog page uses `/api/posts` and `/api/heatmap`. The homepage also fetches the public contribution calendar for `GITHUB_USERNAME` (defaults to `mykrwt`) through `/api/github-contributions`. Use a Node 18+ runtime.
+The blog page uses `/api/posts` and `/api/heatmap`. The homepage renders a full, animated contribution graph from generated demo data. Use a Node 18+ runtime.
 
 ## Telegram blog manager
 
