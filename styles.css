@@ -143,7 +143,9 @@ ul { list-style: none; }
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  /* Clear the fixed navigation before the hero copy begins. */
+  padding: clamp(9rem, 20vh, 12rem) 0 4rem;
   overflow: hidden;
   background:
     radial-gradient(60% 60% at 70% 20%, rgba(255,255,255,0.05), transparent 70%),
@@ -224,29 +226,29 @@ ul { list-style: none; }
 }
 .hero__meta span { font-size: 0.82rem; color: var(--grey-400); margin-top: 0.4rem; }
 
-.hero__scroll {
-  position: absolute;
-  bottom: 2rem; left: 50%;
-  transform: translateX(-50%);
-  width: 26px; height: 42px;
-  border: 2px solid var(--border-strong);
-  border-radius: 999px;
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  z-index: 2;
+.hero__activity {
+  width: min(100%, 650px);
+  margin-top: 2.8rem;
+  padding: 1.15rem 1.3rem 1rem;
+  background: rgba(22, 22, 22, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 18px 50px -30px rgba(0,0,0,.8);
 }
-.hero__scroll span {
-  width: 4px; height: 8px;
-  background: var(--grey-300);
-  border-radius: 4px;
-  animation: scrollDot 1.6s var(--ease) infinite;
+.hero__activity-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+.hero__activity h2 { font: 600 1.05rem/1.2 var(--font-display); color: var(--pure-white); margin-top: .35rem; }
+.hero__activity-total { color: var(--grey-300); font: 500 .78rem var(--font-display); white-space: nowrap; }
+.heatmap--github {
+  margin-top: .95rem;
+  /* Keep all 52 weeks inside the card instead of letting the cells overlap or clip. */
+  grid-template-columns: repeat(52, minmax(0, 1fr));
+  grid-auto-columns: auto;
+  gap: clamp(2px, .45vw, 4px);
 }
-@keyframes scrollDot {
-  0% { transform: translateY(0); opacity: 1; }
-  70% { transform: translateY(14px); opacity: 0; }
-  100% { opacity: 0; }
-}
+.heatmap--github .heat-cell { width: auto; height: auto; aspect-ratio: 1; min-width: 0; }
+.heatmap-status { color: var(--grey-500); font-size: .8rem; padding: .5rem 0; }
+
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(4.5rem, 10vw, 8rem) 0; }
@@ -666,7 +668,6 @@ ul { list-style: none; }
   .nav__links.open { transform: translateX(0); }
   .project { grid-template-columns: auto 1fr; }
   .project__link { display: none; }
-  .hero__scroll { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
