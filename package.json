@@ -1,0 +1,11 @@
+{
+  "name": "mykrwt-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "mykrwt portfolio and Telegram-managed blog",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": { "node": ">=18" }
+}

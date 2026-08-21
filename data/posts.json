@@ -1,0 +1,46 @@
+[
+  {
+    "id": "designing-in-black-and-white-first",
+    "title": "Designing in black and white first",
+    "excerpt": "Why I start almost every project without color. Stripping a design down to greyscale makes hierarchy and spacing do the heavy lifting.",
+    "content": "Color is persuasive. It can make a weak layout feel finished before it is ready. Starting in black and white forces the structure, hierarchy, and spacing to carry the experience. Once those decisions work, color becomes a useful layer instead of a rescue plan.",
+    "tags": ["Design", "Process"],
+    "date": "2026-08-14",
+    "minutes": 8,
+    "status": "published",
+    "featured": true
+  },
+  {
+    "id": "making-the-web-feel-instant",
+    "title": "Making the web feel instant",
+    "excerpt": "Practical performance wins, from preconnect and lazy loading to shipping less JavaScript on the first visit.",
+    "content": "Perceived speed starts with a fast first frame. I look at the critical request chain, reserve media space before it loads, and keep interaction code close to the moment it is needed.",
+    "tags": ["Performance", "Front-End"],
+    "date": "2026-08-02",
+    "minutes": 6,
+    "status": "published",
+    "featured": false
+  },
+  {
+    "id": "accessibility-isnt-optional",
+    "title": "Accessibility is not optional",
+    "excerpt": "A friendly checklist I run through on every build so the web works for more people, not just some people.",
+    "content": "Keyboard navigation, visible focus, useful labels, readable contrast, and sensible heading order are not polish. They are the product working as intended.",
+    "tags": ["Accessibility", "Craft"],
+    "date": "2026-07-21",
+    "minutes": 5,
+    "status": "published",
+    "featured": false
+  },
+  {
+    "id": "css-that-scales-with-you",
+    "title": "CSS that scales with you",
+    "excerpt": "How I structure stylesheets and use custom properties so a design system grows without turning into spaghetti.",
+    "content": "A small set of intentional tokens, component boundaries, and layout primitives can take a stylesheet a long way. Complexity should be visible, named, and easy to change.",
+    "tags": ["CSS", "Design Systems"],
+    "date": "2026-07-09",
+    "minutes": 7,
+    "status": "published",
+    "featured": false
+  }
+]
