@@ -9,7 +9,7 @@ npm start
 # open http://localhost:8000
 ```
 
-The blog page uses `/api/posts` and `/api/heatmap`. The homepage renders a full, animated contribution graph from generated demo data. Use a Node 18+ runtime.
+The blog page uses `/api/posts` and `/api/heatmap`. The homepage contribution graph is loaded from `/api/github-contributions` (live public GitHub activity). Use a Node 18+ runtime.
 
 ## Telegram blog manager
 

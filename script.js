@@ -12,7 +12,7 @@ const progress = document.getElementById('scrollProgress');
 
 function onScroll() {
   const scrolled = window.scrollY;
-  nav.classList.toggle('scrolled', scrolled > 40);
+  if (nav) nav.classList.toggle('scrolled', scrolled > 40);
 
   const height = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.width = height > 0 ? (scrolled / height) * 100 + '%' : '0%';
@@ -23,17 +23,30 @@ onScroll();
 // Mobile menu toggle
 const toggle = document.getElementById('navToggle');
 const links = document.getElementById('navLinks');
+const overlay = document.getElementById('navOverlay');
 
-if (toggle && links) toggle.addEventListener('click', () => {
-  const open = links.classList.toggle('open');
+function setMenuOpen(open) {
+  if (!toggle || !links) return;
+  links.classList.toggle('open', open);
   toggle.classList.toggle('open', open);
+  overlay?.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('nav-open', open);
+}
+
+if (toggle && links) {
+  toggle.addEventListener('click', () => setMenuOpen(!links.classList.contains('open')));
+}
+overlay?.addEventListener('click', () => setMenuOpen(false));
+if (links) {
+  links.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenuOpen(false)));
+}
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuOpen(false);
 });
-if (links) links.querySelectorAll('a').forEach((a) =>
-  a.addEventListener('click', () => {
-    links.classList.remove('open');
-    toggle.classList.remove('open');
-  })
-);
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 680) setMenuOpen(false);
+});
 
 // Reveal on scroll
 const revealEls = document.querySelectorAll('.reveal');
@@ -71,98 +84,78 @@ sections.forEach((s) => spyObserver.observe(s));
 
 // ============================================================
 //  Contribution activity (home page)
-//  Rendered from generated, realistic-looking data so the
-//  graph always looks full without depending on the network.
+//  Prefer live GitHub data so the graph isn't a solid fake wall.
 // ============================================================
 
-// Deterministic PRNG (mulberry32) — stable data across reloads.
-function makeRng(seed) {
-  let a = seed >>> 0;
-  return function () {
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
+function isoDate(date) {
+  return date.toISOString().slice(0, 10);
 }
 
-// Produce a full year of believable, weekday-weighted, streaky activity.
-function generateFakeContributions() {
-  const rng = makeRng(20260821);
-  const counts = {};
-  let total = 0;
-  const today = new Date();
-  today.setHours(12, 0, 0, 0);
-
-  const days = [];
-  for (let i = 363; i >= 0; i -= 1) {
-    const d = new Date(today);
-    d.setDate(today.getDate() - i);
-    days.push(d);
-  }
-
-  let streak = 0;
-  days.forEach((d, idx) => {
-    const dow = d.getDay();
-    const weekend = dow === 0 || dow === 6;
-    const key = d.toISOString().slice(0, 10);
-
-    // Activity ramps up slightly across the year so the chart feels alive.
-    const progress = idx / days.length;
-    const activeChance = 0.74 + progress * 0.15 - (weekend ? 0.2 : 0);
-
-    let count = 0;
-    if (rng() < activeChance || streak > 0) {
-      let level = (weekend ? 1 : 2) + Math.floor(rng() * 3); // ~1-4
-      if (rng() > 0.85) level += 2;              // occasional burst
-      if (streak > 0 && rng() > 0.4) level += 1; // streak momentum
-      count = Math.max(0, Math.min(9, level + Math.floor(rng() * 3)));
-      streak = rng() > 0.35 ? streak + 1 : 0;
-    } else {
-      streak = 0;
-    }
-
-    counts[key] = count;
-    total += count;
-  });
-
-  return { counts, total };
+function levelFromCount(count) {
+  if (count <= 0) return 0;
+  if (count === 1) return 1;
+  if (count <= 3) return 2;
+  if (count <= 6) return 3;
+  return 4;
 }
 
-function renderGithubHeatmap(counts, total, username) {
+function renderGithubHeatmap(counts, total, username, levels) {
   const heatmap = document.getElementById('githubHeatmap');
   const totalEl = document.getElementById('githubTotal');
   if (!heatmap) return;
 
   const today = new Date();
   today.setHours(12, 0, 0, 0);
+
+  // GitHub's calendar starts on Sunday of the week that contains ~1 year ago.
+  const start = new Date(today);
+  start.setDate(start.getDate() - 364);
+  start.setDate(start.getDate() - start.getDay());
+
   const fragment = document.createDocumentFragment();
-  for (let i = 363; i >= 0; i -= 1) {
-    const date = new Date(today);
-    date.setDate(today.getDate() - i);
-    const key = date.toISOString().slice(0, 10);
-    const count = counts[key] || 0;
+  let index = 0;
+  for (const date = new Date(start); date <= today; date.setDate(date.getDate() + 1)) {
+    const key = isoDate(date);
+    const count = Number(counts[key] || 0);
+    const level = levels && levels[key] != null
+      ? Math.max(0, Math.min(4, Number(levels[key])))
+      : levelFromCount(count);
     const cell = document.createElement('span');
-    cell.className = `heat-cell heat-cell--pop level-${Math.min(count, 4)}`;
+    cell.className = `heat-cell heat-cell--pop level-${level}`;
     cell.title = `${count} contribution${count === 1 ? '' : 's'} on ${key}`;
     cell.setAttribute('aria-label', cell.title);
-    // Cascade the pop-in from oldest day to newest.
-    cell.style.animationDelay = `${(363 - i) * 4}ms`;
+    cell.style.animationDelay = `${Math.min(index, 80) * 8}ms`;
     fragment.appendChild(cell);
+    index += 1;
   }
   heatmap.replaceChildren(fragment);
 
   if (totalEl) {
-    totalEl.textContent = `${total.toLocaleString()} contributions in the last year`;
-    totalEl.title = `Public contributions by ${username}`;
+    const label = `${Number(total || 0).toLocaleString()} contributions in the last year`;
+    totalEl.textContent = label;
+    totalEl.title = username ? `Public contributions by ${username}` : label;
   }
 }
 
-const githubHeatmap = document.getElementById('githubHeatmap');
-if (githubHeatmap) {
-  const { counts, total } = generateFakeContributions();
-  renderGithubHeatmap(counts, total, 'mykrwt');
+async function loadGithubHeatmap() {
+  const heatmap = document.getElementById('githubHeatmap');
+  if (!heatmap) return;
+
+  try {
+    const response = await fetch('/api/github-contributions');
+    if (!response.ok) throw new Error('heatmap unavailable');
+    const data = await response.json();
+    const counts = data.counts || {};
+    if (!Object.keys(counts).length) throw new Error('empty heatmap');
+    renderGithubHeatmap(counts, data.total, data.username, data.levels);
+  } catch {
+    renderGithubHeatmap({}, 0, 'mykrwt', {});
+    const totalEl = document.getElementById('githubTotal');
+    if (totalEl) totalEl.textContent = 'GitHub activity unavailable';
+  }
 }
+
+loadGithubHeatmap();
 
 // Newsletter form (blog page only)
 const newsletterForm = document.getElementById('newsletterForm');
@@ -192,7 +185,7 @@ function buildTechMarquee() {
   ];
   const renderItem = ([name, slug]) => `
     <div class="tech-item">
-      <img src="https://cdn.simpleicons.org/${slug}" alt="${name} logo" loading="lazy" width="30" height="30" onerror="this.style.visibility='hidden'" />
+      <img src="https://cdn.simpleicons.org/${slug}/e8e8e8" alt="" loading="lazy" width="30" height="30" onerror="this.src='https://cdn.simpleicons.org/${slug}'; this.onerror=null;" />
       <span>${name}</span>
     </div>`;
   // Duplicate the set inside each track so the scroll loops seamlessly.

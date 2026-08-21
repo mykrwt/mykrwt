@@ -3,6 +3,22 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { URL } = require('url');
+const { execFile } = require('child_process');
+
+function fetchGithubHtml(url) {
+  return fetch(url, { headers: { 'user-agent': 'mykrwt-portfolio' } })
+    .then(async (response) => {
+      if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+      return response.text();
+    })
+    .catch(() => new Promise((resolve, reject) => {
+      // Node in some hosts cannot verify GitHub's TLS chain; curl uses the system CAs.
+      execFile('curl', ['-sL', '--fail', '-A', 'mykrwt-portfolio', url], { maxBuffer: 8_000_000 }, (error, stdout) => {
+        if (error || !stdout) reject(error || new Error('empty GitHub response'));
+        else resolve(stdout);
+      });
+    }));
+}
 
 const PORT = Number(process.env.PORT || 8000);
 const ROOT = __dirname;
@@ -52,26 +68,31 @@ const server = http.createServer(async (req, res) => {
   if (url.pathname === '/api/github-contributions' && req.method === 'GET') {
     const username = process.env.GITHUB_USERNAME || 'mykrwt';
     try {
-      const response = await fetch(`https://github.com/users/${encodeURIComponent(username)}/contributions` , {
-        headers: { 'user-agent': 'mykrwt-portfolio' }
-      });
-      if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
-      const html = await response.text();
+      const html = await fetchGithubHtml(`https://github.com/users/${encodeURIComponent(username)}/contributions`);
       const counts = {};
+      const levels = {};
       const tooltipCounts = {};
       // GitHub exposes each contribution day as a table cell. Keep the parsing
       // on the server so the browser does not need to make a cross-origin request.
-      html.replace(/<tool-tip[^>]*for="([^"]+)"[^>]*>(\d+) contribution/g, (_, id, count) => {
-        tooltipCounts[id] = Number(count);
+      html.replace(/<tool-tip[^>]*for="([^"]+)"[^>]*>([^<]*)/g, (_, id, label) => {
+        const match = String(label).match(/(\d+)\s+contribution/);
+        if (match) tooltipCounts[id] = Number(match[1]);
         return _;
       });
-      html.replace(/<td\b([^>]*data-date="([^"]+)"[^>]*)><\/td>/g, (_, cell, date) => {
+      html.replace(/<td\b([^>]*data-date="([^"]+)"[^>]*)>/g, (_, cell, date) => {
         const idMatch = cell.match(/id="([^"]+)"/);
         const levelMatch = cell.match(/data-level="(\d+)"/);
-        counts[date] = Number((idMatch && tooltipCounts[idMatch[1]]) || (levelMatch && levelMatch[1]) || 0);
+        const level = Number((levelMatch && levelMatch[1]) || 0);
+        const count = Number((idMatch && tooltipCounts[idMatch[1]]) || 0);
+        counts[date] = count;
+        levels[date] = level;
         return _;
       });
-      return json(res, 200, { counts, total: Object.values(counts).reduce((sum, count) => sum + count, 0), username });
+      const heading = html.match(/([0-9,]+)\s+contributions[\s\S]{0,40}last year/i);
+      const total = heading
+        ? Number(heading[1].replace(/,/g, ''))
+        : Object.values(counts).reduce((sum, count) => sum + count, 0);
+      return json(res, 200, { counts, levels, total, username });
     } catch (error) {
       return json(res, 502, { error: 'GitHub contributions are unavailable.', username });
     }
