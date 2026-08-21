@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Writing by mykrwt — notes on web development, design, and building for the web." />
+  <title>Blog — mykrwt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='monospace'>&lt;/&gt;</text></svg>" />
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html#home" class="nav__logo">mykrwt<span>.</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#work">Work</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Blog header -->
+    <section class="blog-hero">
+      <div class="hero__grid"></div>
+      <div class="container blog-hero__content reveal">
+        <p class="hero__eyebrow">Notes &amp; Writing</p>
+        <h1 class="blog-hero__title">The Blog</h1>
+        <p class="hero__sub">
+          Half-formed thoughts and things I've learned along the way — about the
+          web, design, performance, and the craft of building software.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured post -->
+    <section class="section">
+      <div class="container">
+        <a href="#" class="post-feature reveal">
+          <div class="post-feature__tag">Featured</div>
+          <div class="post-feature__body">
+            <div class="post-meta">
+              <span>Aug 14, 2026</span><span>·</span><span>8 min read</span>
+            </div>
+            <h2>Designing in black &amp; white first</h2>
+            <p>
+              Why I start almost every project without color. Stripping a design
+              down to greyscale forces the layout, hierarchy, and spacing to do
+              the heavy lifting — and the result is nearly always cleaner.
+            </p>
+            <span class="post-feature__cta">Read the post →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Post grid -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">·</span>
+          <h2 class="section__title">All posts</h2>
+        </div>
+        <div class="post-grid">
+          <a href="#" class="post-card reveal">
+            <div class="post-meta">
+              <span>Aug 2, 2026</span><span>·</span><span>6 min</span>
+            </div>
+            <h3>Making the web feel instant</h3>
+            <p>Practical performance wins — from lazy-loading and preconnect to shipping less JavaScript in the first place.</p>
+            <ul class="post-card__tags"><li>Performance</li><li>Front-End</li></ul>
+          </a>
+
+          <a href="#" class="post-card reveal">
+            <div class="post-meta">
+              <span>Jul 21, 2026</span><span>·</span><span>5 min</span>
+            </div>
+            <h3>Accessibility isn't optional</h3>
+            <p>A friendly checklist I run through on every build so the web works for everyone, not just some people.</p>
+            <ul class="post-card__tags"><li>A11y</li><li>Craft</li></ul>
+          </a>
+
+          <a href="#" class="post-card reveal">
+            <div class="post-meta">
+              <span>Jul 9, 2026</span><span>·</span><span>7 min</span>
+            </div>
+            <h3>CSS that scales with you</h3>
+            <p>How I structure stylesheets and use custom properties so a design system grows without turning into spaghetti.</p>
+            <ul class="post-card__tags"><li>CSS</li><li>Design Systems</li></ul>
+          </a>
+
+          <a href="#" class="post-card reveal">
+            <div class="post-meta">
+              <span>Jun 28, 2026</span><span>·</span><span>4 min</span>
+            </div>
+            <h3>Why I still love vanilla JS</h3>
+            <p>Frameworks are great, but a surprising amount of the web can be built simply — and stays fast because of it.</p>
+            <ul class="post-card__tags"><li>JavaScript</li></ul>
+          </a>
+
+          <a href="#" class="post-card reveal">
+            <div class="post-meta">
+              <span>Jun 15, 2026</span><span>·</span><span>6 min</span>
+            </div>
+            <h3>The details that make an interface feel good</h3>
+            <p>Micro-interactions, easing curves, and the tiny touches that separate "works" from "feels right".</p>
+            <ul class="post-card__tags"><li>UI</li><li>Craft</li></ul>
+          </a>
+
+          <a href="#" class="post-card reveal">
+            <div class="post-meta">
+              <span>Jun 1, 2026</span><span>·</span><span>9 min</span>
+            </div>
+            <h3>Shipping side projects (finally)</h3>
+            <p>How I stopped over-engineering and started finishing the things I start. A short, honest field guide.</p>
+            <ul class="post-card__tags"><li>Process</li></ul>
+          </a>
+        </div>
+
+        <div class="newsletter reveal">
+          <h3>Get new posts in your inbox</h3>
+          <p>Occasional writing on the web and building software. No spam, unsubscribe anytime.</p>
+          <form class="newsletter__form" id="newsletterForm">
+            <input type="email" placeholder="you@email.com" aria-label="Email address" required />
+            <button type="submit" class="btn btn--solid">Subscribe</button>
+          </form>
+          <p class="newsletter__note" id="newsletterNote" hidden>Thanks — you're on the list! 🎉</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> mykrwt</span>
+      <span>Designed &amp; built with care.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
