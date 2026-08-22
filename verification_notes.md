@@ -9,3 +9,7 @@ The enhanced transition remains user-gesture initiated. The entry click starts t
 ## Post-Door Social Reveal Verification
 
 The entry transition was re-tested after the link animation update. The door leaves still initiate and move independently before the profile mounts; the social-link reveal is delayed from the profile handoff rather than beginning during the gate motion.
+
+## Resolved Home Loader Verification
+
+The home screen now rests as a complete access frame rather than an isolated crest: the centered mark sits inside a subtle optical field with measurement labels, stable signal context, and an explicit `ENTRY FRAME COMPLETE` state. Activating it preserves the established door opening, sound cue, and delayed profile-link handoff.

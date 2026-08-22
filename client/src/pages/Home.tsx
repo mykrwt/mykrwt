@@ -122,9 +122,16 @@ export default function Home() {
 
       {stage !== "profile" && (
         <section className={`loader-stage fixed inset-0 z-20 grid place-items-center bg-[#12120f] text-[#ebe8df] ${stage === "opening" ? "is-opening" : ""}`} data-ready={stage === "ready"}>
-          <div className="relative z-10 flex flex-col items-center">
-            <button type="button" onClick={openProfile} className="h-[min(76vw,480px)] w-[min(76vw,480px)] min-h-[250px] min-w-[250px] text-[#ebe8df]/85 transition-transform duration-500 hover:scale-[1.025] active:scale-95" aria-label="Open myk.rwt"><OriginalCrest /></button>
-            {stage === "ready" && <button type="button" onClick={openProfile} className="click-control mt-7 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/62 transition-colors hover:text-[#ebe8df]">click</button>}
+          <div className="loader-context absolute left-6 top-6 font-mono text-[8px] tracking-[0.18em] text-[#ebe8df]/32 sm:left-10 sm:top-9">MYK.RWT / ACCESS FRAME</div>
+          <div className="loader-context absolute right-6 top-6 font-mono text-[8px] tracking-[0.18em] text-[#ebe8df]/32 sm:right-10 sm:top-9">CHANNEL / 01</div>
+          <div className="loader-context absolute bottom-6 left-6 font-mono text-[8px] tracking-[0.15em] text-[#ebe8df]/25 sm:bottom-9 sm:left-10">ORIGIN: 00.00.00</div>
+          <div className="loader-context absolute bottom-6 right-6 font-mono text-[8px] tracking-[0.15em] text-[#ebe8df]/25 sm:bottom-9 sm:right-10">SIGNAL: STABLE</div>
+          <div className="loader-shell relative z-10 flex flex-col items-center">
+            <div className="loader-well pointer-events-none absolute left-1/2 top-[calc(50%-17px)] h-[min(88vw,560px)] w-[min(88vw,560px)] min-h-[300px] min-w-[300px] -translate-x-1/2 -translate-y-1/2" />
+            <div className="loader-ready-line pointer-events-none absolute left-1/2 top-[calc(50%-17px)] h-[min(82vw,520px)] w-[min(82vw,520px)] min-h-[280px] min-w-[280px] -translate-x-1/2 -translate-y-1/2" />
+            <button type="button" onClick={openProfile} className="relative h-[min(76vw,480px)] w-[min(76vw,480px)] min-h-[250px] min-w-[250px] text-[#ebe8df]/85 transition-transform duration-500 hover:scale-[1.025] active:scale-95" aria-label="Open myk.rwt"><OriginalCrest /></button>
+            <div className="loader-ready-status mt-3 flex items-center gap-2 font-mono text-[8px] tracking-[0.17em] text-[#d6e69d]/72"><span className="loader-ready-dot h-1 w-1 rounded-full bg-[#d6e69d]" /> ENTRY FRAME COMPLETE</div>
+            {stage === "ready" && <button type="button" onClick={openProfile} className="click-control mt-5 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/70 transition-colors hover:text-[#ebe8df]">click to enter</button>}
           </div>
           <div className="gate-leaf gate-left opacity-0" />
           <div className="gate-leaf gate-right opacity-0" />

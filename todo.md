@@ -51,3 +51,9 @@
 - [x] Fade in the existing social links sequentially after the doors fully open.
 - [x] Add a restrained, short-lived glow that preserves the current minimal visual language.
 - [x] Verify the link reveal timing and the unchanged door transition.
+
+# Resolved Home Loader
+
+- [x] Complete the current loading composition with an intentional resting structure and clear entry readiness.
+- [x] Refine the visual finish without replacing the existing crest, door, sound, or profile interactions.
+- [x] Verify the complete loading state and existing entry handoff across desktop and mobile sizes.
