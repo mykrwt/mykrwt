@@ -91,9 +91,9 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-[#11110f] text-[#ebe8df]">
       <div className="deep-paper pointer-events-none absolute inset-0 opacity-30" />
 
-      {stage === "profile" && (
-        <section className="minimal-page relative flex min-h-screen items-center overflow-hidden px-7 py-16 sm:px-12 lg:px-20">
-          <div className="profile-optic pointer-events-none absolute -right-44 top-1/2 h-[540px] w-[540px] -translate-y-1/2 opacity-45" />
+      {(stage === "profile" || stage === "opening") && (
+        <section className={`minimal-page relative flex min-h-screen items-center overflow-hidden px-7 py-16 sm:px-12 lg:px-20 ${stage === "opening" ? "is-peeking" : ""}`}>
+          <div className="profile-optic pointer-events-none absolute -right-28 top-1/2 h-[420px] w-[420px] -translate-y-1/2 opacity-45 sm:-right-44 sm:h-[540px] sm:w-[540px]" />
           <div className="pointer-events-none absolute bottom-10 left-7 h-px w-16 bg-[#c2e886]/45 sm:left-12 lg:left-20" />
           <div className="w-full max-w-[580px]">
             <p className="flex items-center gap-2.5 font-mono text-[10px] tracking-[0.18em] text-[#ebe8df]/42"><MiniMonogram /> Mayank Rawat</p>
@@ -111,7 +111,12 @@ export default function Home() {
           className={`calibration fixed inset-0 z-20 bg-[#11110f] ${stage === "ready" ? "is-ready" : ""} ${stage === "opening" ? "is-opening" : ""} ${stage === "ready" ? "cursor-pointer" : "cursor-wait"}`}
           data-ready={stage === "ready"}
           onClick={openProfile}
-          onKeyDown={(event) => { if (stage === "ready" && (event.key === "Enter" || event.key === " ")) openProfile(); }}
+          onKeyDown={(event) => {
+            if (stage === "ready" && (event.key === "Enter" || event.key === " ")) {
+              event.preventDefault();
+              openProfile();
+            }
+          }}
           role="button"
           tabIndex={stage === "ready" ? 0 : -1}
           aria-label={stage === "ready" ? "Loading complete. Click anywhere to enter." : `Loading profile: ${progress}% complete.`}
