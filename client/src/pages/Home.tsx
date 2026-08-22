@@ -59,11 +59,49 @@ export default function Home() {
 
   useEffect(() => {
     if (stage !== "opening") return;
-    const timer = window.setTimeout(() => setStage("profile"), 1320);
+    const timer = window.setTimeout(() => setStage("profile"), 1540);
     return () => window.clearTimeout(timer);
   }, [stage]);
 
-  const openProfile = () => setStage("opening");
+  const playDoorSound = () => {
+    if (!("AudioContext" in window)) return;
+
+    const context = new AudioContext();
+    const now = context.currentTime;
+    const master = context.createGain();
+    master.gain.setValueAtTime(0.0001, now);
+    master.gain.exponentialRampToValueAtTime(0.038, now + 0.08);
+    master.gain.exponentialRampToValueAtTime(0.0001, now + 1.18);
+    master.connect(context.destination);
+
+    const lowBody = context.createOscillator();
+    lowBody.type = "sine";
+    lowBody.frequency.setValueAtTime(116, now);
+    lowBody.frequency.exponentialRampToValueAtTime(72, now + 1.08);
+    lowBody.connect(master);
+
+    const softCreak = context.createOscillator();
+    const creakGain = context.createGain();
+    softCreak.type = "triangle";
+    softCreak.frequency.setValueAtTime(286, now + 0.04);
+    softCreak.frequency.exponentialRampToValueAtTime(174, now + 0.88);
+    creakGain.gain.setValueAtTime(0.0001, now);
+    creakGain.gain.exponentialRampToValueAtTime(0.13, now + 0.13);
+    creakGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.95);
+    softCreak.connect(creakGain).connect(master);
+
+    lowBody.start(now);
+    softCreak.start(now + 0.04);
+    lowBody.stop(now + 1.2);
+    softCreak.stop(now + 1.02);
+    window.setTimeout(() => context.close(), 1450);
+  };
+
+  const openProfile = () => {
+    if (stage !== "ready") return;
+    playDoorSound();
+    setStage("opening");
+  };
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#12120f] text-[#ebe8df]">

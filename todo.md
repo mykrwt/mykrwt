@@ -39,3 +39,9 @@
 
 - [x] Refine only the split-door transition with more physical opening depth and timing.
 - [x] Confirm the revised animation opens cleanly into the existing profile without altering other elements.
+
+# Door Sound and Smoothness
+
+- [x] Add a quiet user-gesture-safe door-opening sound that begins with the transition.
+- [x] Further smooth the split-door movement while preserving all other visual content.
+- [x] Verify the synchronized sound and completed door reveal.
