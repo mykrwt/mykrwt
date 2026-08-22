@@ -114,3 +114,25 @@ The animation slows into five quiet phases. It begins with the outer frame, foll
 ### Applied Completion Amendments
 
 The root route must always retain the finished talisman in a visible resting state with the `click` cue, even before the staged drawing completes. The final page keeps its spare deep-paper field but uses a talisman-derived route glyph beside Mayank Rawat and quiet indexed link routes so its minimal typography and interaction language remain recognizably part of the same handmade system.
+
+## Style Decisions — Medieval Ink Sigil
+
+The new mark is a personal medieval **wayfinder seal**. Its four symbols encode a deliberately simple meaning: the **arch** is a threshold into a private world; the **four-point compass** represents curiosity and direction; the **open eye** at its center represents attention to detail; and the **small star** at the foot is a promise to keep moving forward. A small wax-seal ring contains the composition so it feels like a manuscript maker’s stamp rather than a decorative logo.
+
+The inscription will be genuinely sequential. There is no finished pattern behind the drawing: first the arch appears, then the compass spine, then each eye contour, the seal ring, the four small direction marks, and finally the star. Each route uses a distinct staggered stroke, with a subtle pause between symbolic steps. The `click` cue appears only after the final star is drawn and the ink has settled.
+
+## Style Decisions — Organic Pen-Drawing Loader
+
+The new mark discards the geometric seal in favor of an original organic **scribe’s thorn**: a rough, symmetrical cluster of curled tendrils, two wing-like flourishes, a central flame, and a small crosshair spine. It takes inspiration only from the supplied reference’s handmade, medieval ink energy—not its exact paths or silhouette.
+
+The animation must read like a hand at work. One white-ink pen tip travels along the active path with a small trailing glow; the line grows immediately behind the moving tip, pauses briefly at a curve end, lifts across the gap, and then resumes on the next tendril. The pen follows every path in a deliberate sequence, finishing with a central ink dot. Only then does the `click` word appear.
+
+## Style Decisions — Fresh Loading Page Reset
+
+This direction discards the sigil, seal, route, and pen metaphors. The new loader is called **Stillroom**: a deep charcoal chamber in which a precise luminous structure calibrates itself. It borrows its visual language from architectural models, optical instruments, and fine editorial layouts—not medieval ornament or generic sci-fi HUDs.
+
+Stillroom is detailed through **quiet systems**, not visual noise. A central suspended object is built from three offset wireframe planes, a fine ruled sphere, discrete orbit markers, and a moving calibration beam. Around it, a minimal measuring frame and small typographic coordinates provide scale. The object calibrates in a slow loop: its planes align, the beam sweeps, markers settle, and the word `enter` appears once the system reaches balance. The composition uses only charcoal, warm bone, muted pewter, and a trace of mineral green. The reveal is a clean optical aperture: the loading structure contracts into a single point and the profile fades in.
+
+### Applied Stillroom Amendments
+
+The Stillroom object is the visual anchor at rest: it stays large, legible, and visibly calibrated before interaction. Behind the minimal profile, a faint optical residue and a precise mineral-green reference line make the two states feel connected. The `m` monogram and the indexed link routes use the same nested-square, marker, and measurement language without expanding the page beyond its name, bio, and links.

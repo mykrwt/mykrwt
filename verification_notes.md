@@ -15,3 +15,11 @@ Activating the mark completed the short split reveal and landed on a page contai
 ## Expanded Pattern Verification
 
 The enhanced loading route now presents a large original orbital crest with layered curved wings, contour loops, cross-routes, orbit rings, and a central core. The live loader remains centered, visually substantial, and retains the single `click` cue; the final responsive profile content has not grown beyond the requested name, bio, and links.
+
+## Medieval Ink Sigil Verification
+
+The revised live loader begins with only the arch, confirming there is no completed crest behind the animation. It then writes the wayfinder seal through its symbolic stages: the central spine and eye, the seal rings, four direction points, the bottom star, and final endpoints. The lowercase `click` control appears only after the final ink marks have settled.
+
+## Stillroom Verification
+
+The fresh loader is a standalone Stillroom calibration chamber rather than a sigil. At rest it presents the large suspended optical sphere, three offset wireframe planes, orbit markers, a scan beam, coordinate labels, and an `enter` cue. The live browser confirms that these elements are visible together on the dark deep-paper ground before interaction.

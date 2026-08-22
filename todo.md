@@ -41,3 +41,24 @@
 - [x] Add balanced fine details and close all major visual paths into a cohesive pattern.
 - [x] Slow the multi-pass drawing sequence and delay the `click` prompt until the crest feels complete.
 - [x] Verify the completed crest and the unchanged minimal profile on desktop and mobile.
+
+# Medieval Ink Sigil
+
+- [x] Reframe the crest as a meaningful medieval personal seal with a clear symbolic structure.
+- [x] Remove the completed static symbol beneath the animation so every visible route is actually written in sequence.
+- [x] Slow the animation into individual ink strokes and reveal `click` only after the final seal mark is made.
+- [x] Verify the medieval ink drawing and the unchanged minimal profile across desktop and mobile sizes.
+
+# Organic Pen-Drawing Loader
+
+- [x] Replace the geometric seal with an original organic ink drawing inspired by the reference’s hand-drawn energy.
+- [x] Animate a visible pen-tip/ink cursor along each path so the mark looks physically drawn, not revealed by a mask.
+- [x] Reveal `click` only after the final curve and ink dot settle, keeping the minimal profile unchanged.
+- [x] Verify the pen-led drawing and the final profile reveal across desktop and mobile sizes.
+
+# Fresh Loading Page Reset
+
+- [x] Remove the prior sigil and pen-drawing concepts from the loading screen.
+- [x] Establish a new clean, detailed loading composition with one coherent visual system.
+- [x] Implement sophisticated but restrained motion and a simple reveal into the profile.
+- [x] Verify the new loading experience across desktop and mobile sizes.

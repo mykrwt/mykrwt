@@ -1,10 +1,10 @@
 /**
- * MYK.RWT DESIGN REMINDER — Completed Crest: a fully closed original talisman line pattern
- * draws slowly in five phases; the revealed same-color page stays only name, bio, and links.
+ * MYK.RWT DESIGN REMINDER — Stillroom is a fresh clean technical loading chamber made of
+ * calibration planes and an optical sphere. The post-loading page remains intentionally sparse.
  */
 import { useEffect, useState } from "react";
 
-type Stage = "ready" | "opening" | "profile";
+type Stage = "calibrating" | "ready" | "opening" | "profile";
 
 const links = [
   { label: "instagram", href: "https://instagram.com/myk.rwt" },
@@ -13,93 +13,89 @@ const links = [
   { label: "email", href: "mailto:hello@myk.rwt" },
 ];
 
-function CrestArtwork({ animated = false }: { animated?: boolean }) {
-  const line = (pass: string) => animated ? `crest-line ${pass}` : "crest-line-static";
-  const dot = (pass: string) => animated ? `crest-dot ${pass}` : "crest-dot-static";
+function StillroomCore() {
+  const markers = [
+    { x: 300, y: 94, delay: "0s" }, { x: 506, y: 300, delay: "0.5s" },
+    { x: 300, y: 506, delay: "1s" }, { x: 94, y: 300, delay: "1.5s" },
+  ];
 
   return (
-    <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-      <path className={line("crest-pass-one")} d="M250 22C278 68 320 86 365 70c-16 48 3 86 54 108-44 30-54 70-28 116-50-5-85 16-101 60-25-37-55-37-80 0-16-44-51-65-101-60 26-46 16-86-28-116 51-22 70-60 54-108 45 16 87-2 115-48Z" strokeWidth="2.35" />
-      <path className={line("crest-pass-one")} d="M250 478c-28-46-70-64-115-48 16-48-3-86-54-108 44-30 54-70 28-116 50 5 85-16 101-60 25 37 55 37 80 0 16 44 51 65 101 60-26 46-16 86 28 116-51 22-70 60-54 108-45-16-87 2-115 48Z" strokeWidth="1.75" />
-
-      <path className={line("crest-pass-two")} d="M250 94c32 37 57 51 92 48-7 34 6 61 38 82-35 7-57 29-66 65-23-24-43-30-64-19-21-11-41-5-64 19-9-36-31-58-66-65 32-21 45-48 38-82 35 3 60-11 92-48Z" strokeWidth="1.55" />
-      <path className={line("crest-pass-two")} d="M250 406c-32-37-57-51-92-48 7-34-6-61-38-82 35-7 57-29 66-65 23 24 43 30 64 19 21 11 41 5 64-19 9 36 31 58 66 65-32 21-45 48-38 82-35-3-60 11-92 48Z" strokeWidth="1.2" />
-
-      <path className={line("crest-pass-three")} d="M250 250c-1-51 17-90 55-116 11 43 1 78-30 106 34-12 66-9 98 12-34 18-66 21-98 9 31 28 41 63 30 105-38-26-56-65-55-116Z" strokeWidth="1.25" />
-      <path className={line("crest-pass-three")} d="M250 250c51-1 90 17 116 55-43 11-78 1-106-30 12 34 9 66-12 98-18-34-21-66-9-98-28 31-63 41-105 30 26-38 65-56 116-55Z" strokeWidth="1.1" />
-      <path className={line("crest-pass-three")} d="M250 250c1 51-17 90-55 116-11-43-1-78 30-106-34 12-66 9-98-12 34-18 66-21 98-9-31-28-41-63-30-105 38 26 56 65 55 116Z" strokeWidth=".95" />
-      <path className={line("crest-pass-three")} d="M250 250c-51 1-90-17-116-55 43-11 78-1 106 30-12-34-9-66 12-98 18 34 21 66 9 98 28-31 63-41 105-30-26 38-65 56-116 55Z" strokeWidth=".85" />
-      <path className={line("crest-pass-three")} d="M250 192c18 18 23 38 15 58 20-8 40-3 58 15-18 18-38 23-58 15 8 20 3 40-15 58-18-18-23-38-15-58-20 8-40 3-58-15 18-18 38-23 58-15-8-20-3-40 15-58Z" strokeWidth="1.15" />
-
-      <circle className={line("crest-pass-four")} cx="250" cy="250" r="132" strokeWidth=".9" strokeDasharray="2 10" />
-      <circle className={line("crest-pass-four")} cx="250" cy="250" r="168" strokeWidth=".7" strokeDasharray="3 13" />
-      <path className={line("crest-pass-four")} d="M250 54v392M54 250h392M112 112l276 276M388 112 112 388" strokeWidth=".72" opacity=".8" />
-
-      <circle className={dot("crest-pass-five")} cx="250" cy="250" r="8" strokeWidth="1.2" />
-      <circle className={dot("crest-pass-five")} cx="250" cy="55" r="4" fill="currentColor" stroke="none" />
-      <circle className={dot("crest-pass-five")} cx="445" cy="250" r="4" fill="currentColor" stroke="none" />
-      <circle className={dot("crest-pass-five")} cx="250" cy="445" r="4" fill="currentColor" stroke="none" />
-      <circle className={dot("crest-pass-five")} cx="55" cy="250" r="4" fill="currentColor" stroke="none" />
-      <path className={line("crest-pass-five")} d="M250 72l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13ZM428 250l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13ZM250 428l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13ZM72 250l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13Z" strokeWidth=".8" />
-    </g>
-  );
-}
-
-function CompletedCrest() {
-  return (
-    <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="loader-mark h-full w-full overflow-visible" aria-hidden="true">
-      <g opacity=".24"><CrestArtwork /></g>
-      <CrestArtwork animated />
+    <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full overflow-visible" aria-hidden="true">
+      <defs>
+        <radialGradient id="roomCore"><stop stopColor="#EDE9DD" stopOpacity=".24" /><stop offset="1" stopColor="#EDE9DD" stopOpacity="0" /></radialGradient>
+        <linearGradient id="roomBeam" x1="300" y1="300" x2="524" y2="300"><stop stopColor="#C2E886" stopOpacity="0" /><stop offset=".72" stopColor="#C2E886" stopOpacity=".82" /><stop offset="1" stopColor="#C2E886" stopOpacity="0" /></linearGradient>
+      </defs>
+      <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+        <g className="room-plane-a" opacity=".38"><rect x="166" y="166" width="268" height="268" strokeWidth="1.1" /><path d="M166 300h268M300 166v268" strokeWidth=".65" strokeDasharray="2 10" /></g>
+        <g className="room-plane-b" opacity=".30"><rect x="194" y="194" width="212" height="212" strokeWidth="1" /><path d="M194 194 406 406M406 194 194 406" strokeWidth=".7" /></g>
+        <g className="room-plane-c" opacity=".34"><rect x="220" y="220" width="160" height="160" strokeWidth=".85" strokeDasharray="4 7" /></g>
+        <g className="room-orbit" opacity=".45"><circle cx="300" cy="300" r="207" strokeWidth=".8" strokeDasharray="2 11" /><circle cx="300" cy="300" r="177" strokeWidth=".6" strokeDasharray="3 15" /></g>
+        <g className="room-sphere">
+          <circle cx="300" cy="300" r="105" fill="url(#roomCore)" strokeWidth="1.2" opacity=".92" />
+          <ellipse cx="300" cy="300" rx="105" ry="43" strokeWidth=".85" opacity=".7" />
+          <ellipse cx="300" cy="300" rx="48" ry="105" strokeWidth=".85" opacity=".55" />
+          <path d="M195 300h210M212 253c54 26 122 26 176 0M212 347c54-26 122-26 176 0" strokeWidth=".65" opacity=".6" />
+          <circle cx="300" cy="300" r="31" strokeWidth="1.1" />
+          <circle cx="300" cy="300" r="4.5" fill="currentColor" stroke="none" />
+        </g>
+        <g className="room-scan"><path d="M300 300 515 300" stroke="url(#roomBeam)" strokeWidth="1.4" /><circle cx="515" cy="300" r="4" fill="#C2E886" stroke="none" /></g>
+        {markers.map(({ x, y, delay }) => <g key={`${x}-${y}`} className="room-marker" style={{ "--marker-delay": delay } as React.CSSProperties}><circle cx={x} cy={y} r="5" fill="#C2E886" stroke="none" /><circle cx={x} cy={y} r="11" stroke="#C2E886" strokeWidth=".7" /></g>)}
+        <path d="M300 69v47M531 300h-47M300 531v-47M69 300h47" strokeWidth="1.05" opacity=".64" />
+      </g>
     </svg>
   );
 }
 
-function MiniMark() {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#ebe8df]/54" aria-hidden="true">
-      <path d="M16 3c3 5 7 6 11 4-1 5 1 8 4 10-4 2-5 5-3 9-5-1-8 1-10 4-2-3-5-3-8 0-2-3-5-5-10-4 2-4 1-7-3-9 3-2 5-5 4-10 4 2 8 1 11-4Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M16 7v18M7 16h18M10 10l12 12M22 10 10 22" stroke="currentColor" strokeWidth=".55" strokeLinecap="round" />
-      <circle cx="16" cy="16" r="1.6" fill="currentColor" />
-    </svg>
-  );
+function MiniMonogram() {
+  return <span className="relative grid h-5 w-5 place-items-center border border-[#ebe8df]/35 text-[8px] font-medium text-[#ebe8df]/65"><i className="absolute inset-[4px] border border-[#ebe8df]/25" /><i className="absolute h-1 w-1 rounded-full bg-[#c2e886]" /></span>;
 }
 
 export default function Home() {
-  const [stage, setStage] = useState<Stage>(() => new URLSearchParams(window.location.search).has("showcase") ? "profile" : "ready");
+  const [stage, setStage] = useState<Stage>(() => new URLSearchParams(window.location.search).has("showcase") ? "profile" : "calibrating");
+
+  useEffect(() => {
+    if (stage !== "calibrating") return;
+    const timer = window.setTimeout(() => setStage("ready"), 800);
+    return () => window.clearTimeout(timer);
+  }, [stage]);
 
   useEffect(() => {
     if (stage !== "opening") return;
-    const timer = window.setTimeout(() => setStage("profile"), 1250);
+    const timer = window.setTimeout(() => setStage("profile"), 980);
     return () => window.clearTimeout(timer);
   }, [stage]);
 
   const openProfile = () => setStage("opening");
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#12120f] text-[#ebe8df]">
+    <main className="relative min-h-screen overflow-hidden bg-[#11110f] text-[#ebe8df]">
       <div className="deep-paper pointer-events-none absolute inset-0 opacity-30" />
 
       {stage === "profile" && (
-        <section className="minimal-page flex min-h-screen items-center px-7 py-16 sm:px-12 lg:px-20">
+        <section className="minimal-page relative flex min-h-screen items-center overflow-hidden px-7 py-16 sm:px-12 lg:px-20">
+          <div className="profile-optic pointer-events-none absolute -right-44 top-1/2 h-[540px] w-[540px] -translate-y-1/2 opacity-45" />
+          <div className="pointer-events-none absolute bottom-10 left-7 h-px w-16 bg-[#c2e886]/45 sm:left-12 lg:left-20" />
           <div className="w-full max-w-[580px]">
-            <p className="flex items-center gap-2.5 font-mono text-[10px] tracking-[0.18em] text-[#ebe8df]/42"><MiniMark /> Mayank Rawat</p>
+            <p className="flex items-center gap-2.5 font-mono text-[10px] tracking-[0.18em] text-[#ebe8df]/42"><MiniMonogram /> Mayank Rawat</p>
             <h1 className="mt-6 text-[clamp(4.6rem,10vw,8.5rem)] font-semibold leading-[0.78] tracking-[-0.10em] text-[#f0eee7]">myk.rwt</h1>
             <p className="mt-7 max-w-[360px] text-[15px] leading-7 tracking-[-0.02em] text-[#ebe8df]/60 sm:text-base">making small things, collecting better questions, and spending too long on the details.</p>
             <nav className="mt-12 max-w-[420px] border-t border-[#ebe8df]/15" aria-label="Social links">
-              {links.map(({ label, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]"><span className="flex items-center gap-3"><span className="relative font-mono text-[8px] tracking-[0.1em] text-[#ebe8df]/32">0{index + 1}<i className="absolute left-[9px] top-1/2 h-px w-3 -translate-y-1/2 rotate-[-28deg] bg-[#ebe8df]/25" /></span>{label}</span><span className="flex items-center gap-2"><i className="h-px w-4 bg-[#ebe8df]/15 transition-all duration-200 group-hover:w-7 group-hover:bg-[#ebe8df]/42" /><span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#ebe8df]/70">↗</span></span></a>)}
+              {links.map(({ label, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]"><span className="flex items-center gap-3"><span className="relative font-mono text-[8px] tracking-[0.1em] text-[#c2e886]/58">0{index + 1}<i className="absolute left-[10px] top-1/2 h-px w-3 -translate-y-1/2 bg-[#c2e886]/30" /></span>{label}</span><span className="flex items-center gap-2"><i className="h-px w-4 bg-[#ebe8df]/15 transition-all duration-200 group-hover:w-7 group-hover:bg-[#c2e886]/50" /><span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#c2e886]">↗</span></span></a>)}
             </nav>
           </div>
         </section>
       )}
 
       {stage !== "profile" && (
-        <section className={`loader-stage fixed inset-0 z-20 grid place-items-center bg-[#12120f] text-[#ebe8df] ${stage === "opening" ? "is-opening" : ""}`} data-ready={stage === "ready"}>
-          <div className="relative z-10 flex flex-col items-center">
-            <button type="button" onClick={openProfile} className="h-[min(78vw,510px)] w-[min(78vw,510px)] min-h-[260px] min-w-[260px] text-[#ebe8df]/87 transition-transform duration-500 hover:scale-[1.018] active:scale-95" aria-label="Open myk.rwt"><CompletedCrest /></button>
-            {stage === "ready" && <button type="button" onClick={openProfile} className="click-control mt-8 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/62 transition-colors hover:text-[#ebe8df]">click</button>}
+        <section className={`calibration fixed inset-0 z-20 bg-[#11110f] ${stage === "opening" ? "is-opening" : ""}`} data-ready={stage === "ready"}>
+          <div className="calibration-chrome absolute left-6 top-6 font-mono text-[9px] tracking-[0.16em] text-[#ebe8df]/42 sm:left-10 sm:top-9">MYK.RWT / STILLROOM</div>
+          <div className="calibration-chrome absolute right-6 top-6 font-mono text-[9px] tracking-[0.14em] text-[#ebe8df]/42 sm:right-10 sm:top-9">CALIBRATION / 01</div>
+          <div className="calibration-chrome absolute bottom-6 left-6 font-mono text-[8px] tracking-[0.14em] text-[#ebe8df]/32 sm:bottom-9 sm:left-10">FRAME: 600 × 600</div>
+          <div className="calibration-chrome absolute bottom-6 right-6 font-mono text-[8px] tracking-[0.14em] text-[#ebe8df]/32 sm:bottom-9 sm:right-10">STATUS: ALIGNING</div>
+          <div className="room-core absolute left-1/2 top-1/2 h-[min(88vw,660px)] w-[min(88vw,660px)] min-h-[320px] min-w-[320px] -translate-x-1/2 -translate-y-1/2 text-[#ebe8df]/95">
+            <StillroomCore />
           </div>
-          <div className="gate-leaf gate-left opacity-0" />
-          <div className="gate-leaf gate-right opacity-0" />
+          {stage === "ready" && <button type="button" onClick={openProfile} className="enter-control absolute bottom-[13%] left-1/2 -translate-x-1/2 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/68 transition-colors hover:text-[#ebe8df]">enter</button>}
         </section>
       )}
     </main>
