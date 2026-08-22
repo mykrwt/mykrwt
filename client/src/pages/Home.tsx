@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 
 type Stage = "calibrating" | "ready" | "opening" | "profile";
 
+const LOAD_DURATION = 3200;
+
 const links = [
   { label: "instagram", handle: "@myk.rwt", href: "https://instagram.com/myk.rwt" },
   { label: "discord", handle: "bilota.fn", href: "https://discord.com" },
@@ -53,11 +55,26 @@ function MiniMonogram() {
 
 export default function Home() {
   const [stage, setStage] = useState<Stage>(() => new URLSearchParams(window.location.search).has("showcase") ? "profile" : "calibrating");
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (stage !== "calibrating") return;
-    const timer = window.setTimeout(() => setStage("ready"), 3600);
-    return () => window.clearTimeout(timer);
+
+    let frameId = 0;
+    const startedAt = window.performance.now();
+    const advanceProgress = (now: number) => {
+      const nextProgress = Math.min(100, Math.round(((now - startedAt) / LOAD_DURATION) * 100));
+      setProgress(nextProgress);
+
+      if (nextProgress < 100) {
+        frameId = window.requestAnimationFrame(advanceProgress);
+      } else {
+        setStage("ready");
+      }
+    };
+
+    frameId = window.requestAnimationFrame(advanceProgress);
+    return () => window.cancelAnimationFrame(frameId);
   }, [stage]);
 
   useEffect(() => {
@@ -80,7 +97,7 @@ export default function Home() {
           <div className="pointer-events-none absolute bottom-10 left-7 h-px w-16 bg-[#c2e886]/45 sm:left-12 lg:left-20" />
           <div className="w-full max-w-[580px]">
             <p className="flex items-center gap-2.5 font-mono text-[10px] tracking-[0.18em] text-[#ebe8df]/42"><MiniMonogram /> Mayank Rawat</p>
-            <h1 className="mt-6 text-[clamp(4.6rem,10vw,8.5rem)] font-semibold leading-[0.78] tracking-[-0.10em] text-[#f0eee7]">myk.rwt</h1>
+            <h1 className="profile-wordmark mt-6 text-[clamp(4.6rem,10vw,8.5rem)] leading-[0.78] text-[#f0eee7]">myk.rwt</h1>
             <p className="mt-7 max-w-[360px] text-[15px] leading-7 tracking-[-0.02em] text-[#ebe8df]/60 sm:text-base">making small things, collecting better questions, and spending too long on the details.</p>
             <nav className="mt-12 max-w-[420px] border-t border-[#ebe8df]/15" aria-label="Social links">
               {links.map(({ label, handle, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]"><span className="flex items-center gap-3"><span className="relative font-mono text-[8px] tracking-[0.1em] text-[#c2e886]/58">0{index + 1}<i className="absolute left-[10px] top-1/2 h-px w-3 -translate-y-1/2 bg-[#c2e886]/30" /></span><span>{label}<small className="ml-2 font-mono text-[8px] tracking-[0.08em] text-[#ebe8df]/35">{handle}</small></span></span><span className="flex items-center gap-2"><i className="h-px w-4 bg-[#ebe8df]/15 transition-all duration-200 group-hover:w-7 group-hover:bg-[#c2e886]/50" /><span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#c2e886]">↗</span></span></a>)}
@@ -97,17 +114,22 @@ export default function Home() {
           onKeyDown={(event) => { if (stage === "ready" && (event.key === "Enter" || event.key === " ")) openProfile(); }}
           role="button"
           tabIndex={stage === "ready" ? 0 : -1}
-          aria-label={stage === "ready" ? "Calibration complete. Click anywhere to enter." : "Calibration in progress."}
+          aria-label={stage === "ready" ? "Loading complete. Click anywhere to enter." : `Loading profile: ${progress}% complete.`}
         >
-          <div className="calibration-chrome absolute left-6 top-6 font-mono text-[9px] tracking-[0.16em] text-[#ebe8df]/42 sm:left-10 sm:top-9">MYK.RWT / STILLROOM</div>
-          <div className="calibration-chrome absolute right-6 top-6 font-mono text-[9px] tracking-[0.14em] text-[#ebe8df]/42 sm:right-10 sm:top-9">CALIBRATION / 01</div>
-          <div className="calibration-chrome absolute bottom-6 left-6 font-mono text-[8px] tracking-[0.14em] text-[#ebe8df]/32 sm:bottom-9 sm:left-10">FRAME: 600 × 600</div>
-          <div className={`calibration-chrome absolute bottom-6 right-6 font-mono text-[8px] tracking-[0.14em] sm:bottom-9 sm:right-10 ${stage === "ready" ? "text-[#c2e886]" : "text-[#ebe8df]/32"}`}>STATUS: {stage === "ready" ? "COMPLETE" : "ALIGNING"}</div>
-          <div className="room-core absolute left-1/2 top-1/2 h-[min(88vw,660px)] w-[min(88vw,660px)] min-h-[320px] min-w-[320px] -translate-x-1/2 -translate-y-1/2 text-[#ebe8df]/95">
-            <StillroomCore />
-          </div>
-          <div className="calibration-status absolute bottom-[12%] left-1/2 -translate-x-1/2 text-center">
-            {stage === "calibrating" ? <><span className="mx-auto mb-3 block h-px w-20 overflow-hidden bg-[#ebe8df]/12"><i className="calibration-progress block h-px bg-[#c2e886]" /></span><span className="font-mono text-[9px] tracking-[0.18em] text-[#ebe8df]/42">CALIBRATING SYSTEM</span></> : <><span className="mx-auto mb-3 flex h-5 w-5 items-center justify-center rounded-full border border-[#c2e886] text-[10px] text-[#c2e886]">+</span><span className="enter-control block font-mono text-[10px] tracking-[0.22em] text-[#c2e886]">READY — CLICK ANYWHERE TO ENTER</span></>}
+          <div className="calibration-body">
+            <div className="room-core text-[#ebe8df]/95">
+              <StillroomCore />
+            </div>
+            <div className="loading-readout" role="status" aria-live="polite" aria-atomic="true">
+              {stage === "calibrating" ? (
+                <>
+                  <span className="loading-meter" aria-hidden="true"><i style={{ transform: `scaleX(${progress / 100})` }} /></span>
+                  <p className="loading-copy"><span>Loading</span><span>{String(progress).padStart(3, "0")}%</span></p>
+                </>
+              ) : (
+                <p className="click-cue">Click</p>
+              )}
+            </div>
           </div>
         </section>
       )}

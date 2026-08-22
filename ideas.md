@@ -136,3 +136,9 @@ Stillroom is detailed through **quiet systems**, not visual noise. A central sus
 ### Applied Stillroom Amendments
 
 The Stillroom object is the visual anchor at rest: it stays large, legible, and visibly calibrated before interaction. Behind the minimal profile, a faint optical residue and a precise mineral-green reference line make the two states feel connected. The `m` monogram and the indexed link routes use the same nested-square, marker, and measurement language without expanding the page beyond its name, bio, and links.
+
+## Style Decisions — Loading Clarity
+
+The Stillroom loader communicates its finite state through one restrained progress meter and percentage while the calibrated optical object remains visible. Once loading reaches completion, the object keeps looping and the meter is replaced only by the capitalized `Click` cue; clicking anywhere enters the profile.
+
+The profile and loader share the same charcoal chamber, warm-bone linework, mineral-green signal, nested-square marker, and subtle optical-residue language. The final page remains sparse: the expression is concentrated in the compact geometric `myk.rwt` wordmark and the faint calibrated form at the far right.
