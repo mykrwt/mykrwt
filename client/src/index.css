@@ -1,6 +1,6 @@
 /**
- * VOIDLINK DESIGN REMINDER — Quiet Flex: reduce visual volume. Let the portrait, negative
- * space, warm bone typography and slow, almost-invisible physical motion carry the feeling.
+ * MYK.RWT DESIGN REMINDER — Sigil Gate: only the supplied black-ink sigil on a light parchment
+ * loading field, then a tactile medieval two-leaf gate opens into the private Field Notes profile.
  */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -34,61 +34,76 @@
 }
 
 :root {
-  --radius: 0.35rem;
-  --background: oklch(0.15 0 0);
-  --foreground: oklch(0.93 0.008 85);
-  --card: oklch(0.17 0 0);
-  --card-foreground: oklch(0.93 0.008 85);
-  --popover: oklch(0.17 0 0);
-  --popover-foreground: oklch(0.93 0.008 85);
-  --primary: oklch(0.93 0.008 85);
-  --primary-foreground: oklch(0.15 0 0);
-  --secondary: oklch(0.21 0 0);
-  --secondary-foreground: oklch(0.77 0.008 85);
-  --muted: oklch(0.22 0 0);
-  --muted-foreground: oklch(0.61 0.01 85);
-  --accent: oklch(0.86 0.008 85);
-  --accent-foreground: oklch(0.15 0 0);
+  --radius: 0.2rem;
+  --background: oklch(0.13 0.006 110);
+  --foreground: oklch(0.91 0.014 90);
+  --card: oklch(0.16 0.008 110);
+  --card-foreground: oklch(0.91 0.014 90);
+  --popover: oklch(0.16 0.008 110);
+  --popover-foreground: oklch(0.91 0.014 90);
+  --primary: oklch(0.91 0.014 90);
+  --primary-foreground: oklch(0.13 0.006 110);
+  --secondary: oklch(0.20 0.008 110);
+  --secondary-foreground: oklch(0.76 0.012 90);
+  --muted: oklch(0.20 0.008 110);
+  --muted-foreground: oklch(0.58 0.016 90);
+  --accent: oklch(0.82 0.028 100);
+  --accent-foreground: oklch(0.13 0.006 110);
   --destructive: oklch(0.63 0.2 25);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.94 0.008 85 / 14%);
-  --input: oklch(0.94 0.008 85 / 14%);
-  --ring: oklch(0.86 0.008 85);
+  --border: oklch(0.91 0.014 90 / 15%);
+  --input: oklch(0.91 0.014 90 / 15%);
+  --ring: oklch(0.82 0.028 100);
 }
 
 * { box-sizing: border-box; }
-
-html { min-width: 320px; background: #101010; }
-
-body {
-  min-height: 100vh;
-  margin: 0;
-  overflow-x: hidden;
-  background: #101010;
-  color: #f0eee8;
-  font-family: "Manrope", sans-serif;
-}
-
+html { min-width: 320px; background: #10110e; }
+body { min-height: 100vh; margin: 0; overflow-x: hidden; background: #10110e; color: #eeeadd; font-family: "Manrope", sans-serif; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:not(:disabled), a[href] { cursor: pointer; }
-::selection { background: #edebe3; color: #101010; }
+::selection { color: #10110e; background: #eeeadd; }
 
-@keyframes arrive {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes ink-draw { from { stroke-dashoffset: 800; } to { stroke-dashoffset: 0; } }
+@keyframes slow-spin { to { transform: rotate(360deg); } }
+@keyframes reverse-spin { to { transform: rotate(-360deg); } }
+@keyframes wavering { 0%,100% { transform: translate3d(0,0,0) rotate(-1deg); } 50% { transform: translate3d(1.2%, -1%, 0) rotate(1.5deg); } }
+@keyframes whisper { 0%,100% { opacity: .28; } 50% { opacity: .75; } }
+@keyframes profile-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gate-pulse { 0%,100% { transform: scale(0.98); opacity: .55; } 50% { transform: scale(1.04); opacity: 1; } }
+@keyframes sigil-arrive { from { opacity: 0; transform: scale(.95); filter: blur(2px); } to { opacity: 1; transform: scale(1); filter: blur(0); } }
+@keyframes sigil-breathe { 0%,100% { transform: scale(1) rotate(-.15deg); } 50% { transform: scale(1.018) rotate(.15deg); } }
+@keyframes click-arrive { to { opacity: 1; transform: translate(-50%, 0); } }
 
-@keyframes breathe {
-  0%, 100% { transform: scale(1.02); }
-  50% { transform: scale(1.06); }
-}
+.portal-line { stroke-dasharray: 800; stroke-dashoffset: 0; }
 
-@keyframes turn-record { to { transform: rotate(360deg); } }
+.sigil-loading { perspective: 1800px; }
+.sigil-focus { animation: sigil-arrive 850ms cubic-bezier(.16,1,.3,1) both; }
+.sigil-ink { animation: sigil-breathe 7.5s ease-in-out 900ms infinite; filter: contrast(1.16); }
+.sigil-click { opacity: 0; transform: translate(-50%, 4px); animation: click-arrive 500ms cubic-bezier(.16,1,.3,1) 950ms forwards; }
+.gate-door { position: absolute; top: 0; bottom: 0; width: 50.25%; opacity: 0; pointer-events: none; background-color: #25231a; background-image: linear-gradient(90deg, rgba(0,0,0,.42), transparent 7%, transparent 93%, rgba(0,0,0,.42)), repeating-linear-gradient(90deg, #25231a 0 8px, #302d21 9px 12px, #201e16 13px 18px); box-shadow: inset 0 0 0 1px rgba(222,205,157,.18), inset 0 0 38px rgba(0,0,0,.65); backface-visibility: hidden; transition: transform 1500ms cubic-bezier(.77,0,.175,1), opacity 80ms linear; }
+.gate-left { left: 0; transform-origin: left center; }
+.gate-right { right: 0; transform-origin: right center; }
+.gate-band { position: absolute; left: 0; right: 0; height: 12px; border-top: 1px solid rgba(230,214,162,.25); border-bottom: 1px solid rgba(0,0,0,.68); background: rgba(14,14,11,.28); }
+.gate-band-one { top: 25%; }
+.gate-band-two { bottom: 25%; }
+.gate-seam { position: absolute; bottom: 0; left: 50%; top: 0; width: 1px; background: rgba(30,28,20,.8); transform: translateX(-50%); opacity: 0; transition: opacity 120ms linear; }
+.is-opening .sigil-focus { opacity: 0; transform: scale(.94); transition: opacity 260ms ease, transform 500ms cubic-bezier(.16,1,.3,1); }
+.is-opening .gate-door { opacity: 1; }
+.is-opening .gate-left { transform: rotateY(-96deg) translateZ(6px); }
+.is-opening .gate-right { transform: rotateY(96deg) translateZ(6px); }
+.is-opening .gate-seam { opacity: 1; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .quiet-arrive { animation: arrive 900ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-  .portrait-breathe { animation: breathe 18s ease-in-out infinite; }
-  .turn-record { animation: turn-record 12s linear infinite; }
+  .draw-a { animation: ink-draw 2.4s cubic-bezier(.22,1,.36,1) .15s forwards; }
+  .draw-b { animation: ink-draw 2.8s cubic-bezier(.22,1,.36,1) .42s forwards; }
+  .draw-c { animation: ink-draw 3.3s cubic-bezier(.22,1,.36,1) .65s forwards; }
+  .draw-d { animation: ink-draw 2s cubic-bezier(.22,1,.36,1) 1s forwards; }
+  .slow-spin { animation: slow-spin 31s linear infinite; }
+  .reverse-spin { animation: reverse-spin 38s linear infinite; }
+  .wavering { animation: wavering 9s ease-in-out infinite; }
+  .whisper { animation: whisper 3.4s ease-in-out infinite; }
+  .profile-in { animation: profile-in 800ms cubic-bezier(.16,1,.3,1) both; }
+  .gate-pulse { animation: gate-pulse 4.4s ease-in-out infinite; }
 }
 
 @media (prefers-reduced-motion: reduce) {
