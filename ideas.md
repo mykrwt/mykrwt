@@ -92,3 +92,15 @@ The entry state is now treated as the primary visual object: it must visibly ret
 The loading page now becomes deliberately austere. It is a light parchment field containing only the supplied black-ink sigil, centered with generous empty space. The sigil should arrive as a quiet ink drawing, barely drift, and remain the whole visual world until a small, lowercase `click` appears beneath it.
 
 The transition is a **medieval gate** rather than an iris or an interface animation. On click, a dark seam rises through the exact center of the sigil; the parchment divides into two heavy, textured doors and each door swings outward while the ink mark separates with them. The private myk.rwt page rests beyond this threshold, preserving the personal hand-drawn system already established.
+
+## Style Decisions — Original Shape Minimal Reset
+
+The uploaded image is **reference only** and must not appear in the website. The loading experience instead uses one small, original asymmetric four-part line mark coded directly as SVG. It borrows only the reference’s handmade ink energy—not its specific drawing, silhouette, or composition.
+
+The page remains one continuous deep-paper color. The original mark draws itself in three short strokes while the page initializes; after the final stroke, a single lowercase `click` control appears. The opening simply parts the drawn mark at the center and fades to the final page. The final page contains only `myk.rwt`, `Mayank Rawat`, a short bio, and sparse link destinations—no illustration, music, dashboard elements, photo, extra metadata, or decorative panels.
+
+## Style Decisions — Expanded Original Pattern
+
+The loader’s original mark now expands into a larger **hand-drawn orbital crest**: a symmetric-but-imperfect composition with four curved wings, nested contour loops, hairline cross routes, dotted orbit rings, and a small central core. It remains entirely original coded linework and does not reproduce the uploaded reference.
+
+The pattern should be the only spectacle. It forms in four measured passes—outer wings, inner loops, connecting route lines, then dots and core—before the `click` cue appears. Once open, it leaves no trace beyond the existing small logo echo; the name, bio, and links page remains unchanged.
