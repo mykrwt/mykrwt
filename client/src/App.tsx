@@ -1,6 +1,6 @@
 /**
- * VOIDLINK DESIGN REMINDER — Quiet Flex: intimate personal presence, soft black and stone,
- * editorial whitespace, plus subtle details that reward attention without visual noise.
+ * VOIDLINK DESIGN REMINDER — Chrome Shrine: dark post-digital editorial futurism;
+ * carbon black, controlled Voidlink Green, off-axis profile artifact, sharp motion.
  */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
