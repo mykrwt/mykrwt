@@ -66,3 +66,11 @@ The logo is an interlocking **V / aperture** symbol: two sharp open chevrons for
 ### Signature Brand Color
 
 **Voidlink Green — `#B7FF3C`**
+
+## Style Decisions — Quiet Flex Redesign
+
+The redesign replaces the original Chrome Shrine expression with **Quiet Flex**, a minimalist late-night profile designed to feel intimate, expensive, and casually self-assured. The user specifically rejected a portfolio-like presentation, so the new page will prioritize a single personal identity, sparse social destinations, and a moment of visual stillness rather than framed dashboard content.
+
+The main composition will use a large, softened editorial portrait receding into one side of the viewport and a restrained text system in the other. Black, soft stone, bone, and subtle silver replace the high-contrast signal palette; any accent will be nearly colorless. Links behave as short personal notes, with simple directional arrows and progressive hover reveals. Motion will be limited to gentle fades, image drift, and a small responsive music control.
+
+> **Revised brand essence:** Voidlink is a private pocket of the internet for people who prefer presence over performance.
