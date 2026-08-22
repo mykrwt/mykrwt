@@ -7,10 +7,11 @@ import { useEffect, useState } from "react";
 type Stage = "calibrating" | "ready" | "opening" | "profile";
 
 const links = [
-  { label: "instagram", href: "https://instagram.com/myk.rwt" },
-  { label: "github", href: "https://github.com/mykrwt" },
-  { label: "discord", href: "https://discord.com" },
-  { label: "email", href: "mailto:hello@myk.rwt" },
+  { label: "instagram", handle: "@myk.rwt", href: "https://instagram.com/myk.rwt" },
+  { label: "discord", handle: "bilota.fn", href: "https://discord.com" },
+  { label: "youtube", handle: "@mykrwt", href: "https://youtube.com/@mykrwt" },
+  { label: "x", handle: "@mykrwtt", href: "https://x.com/mykrwtt" },
+  { label: "github", handle: "@mykrwt", href: "https://github.com/mykrwt" },
 ];
 
 function StillroomCore() {
@@ -55,7 +56,7 @@ export default function Home() {
 
   useEffect(() => {
     if (stage !== "calibrating") return;
-    const timer = window.setTimeout(() => setStage("ready"), 800);
+    const timer = window.setTimeout(() => setStage("ready"), 3600);
     return () => window.clearTimeout(timer);
   }, [stage]);
 
@@ -65,7 +66,9 @@ export default function Home() {
     return () => window.clearTimeout(timer);
   }, [stage]);
 
-  const openProfile = () => setStage("opening");
+  const openProfile = () => {
+    if (stage === "ready") setStage("opening");
+  };
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#11110f] text-[#ebe8df]">
@@ -80,22 +83,32 @@ export default function Home() {
             <h1 className="mt-6 text-[clamp(4.6rem,10vw,8.5rem)] font-semibold leading-[0.78] tracking-[-0.10em] text-[#f0eee7]">myk.rwt</h1>
             <p className="mt-7 max-w-[360px] text-[15px] leading-7 tracking-[-0.02em] text-[#ebe8df]/60 sm:text-base">making small things, collecting better questions, and spending too long on the details.</p>
             <nav className="mt-12 max-w-[420px] border-t border-[#ebe8df]/15" aria-label="Social links">
-              {links.map(({ label, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]"><span className="flex items-center gap-3"><span className="relative font-mono text-[8px] tracking-[0.1em] text-[#c2e886]/58">0{index + 1}<i className="absolute left-[10px] top-1/2 h-px w-3 -translate-y-1/2 bg-[#c2e886]/30" /></span>{label}</span><span className="flex items-center gap-2"><i className="h-px w-4 bg-[#ebe8df]/15 transition-all duration-200 group-hover:w-7 group-hover:bg-[#c2e886]/50" /><span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#c2e886]">↗</span></span></a>)}
+              {links.map(({ label, handle, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]"><span className="flex items-center gap-3"><span className="relative font-mono text-[8px] tracking-[0.1em] text-[#c2e886]/58">0{index + 1}<i className="absolute left-[10px] top-1/2 h-px w-3 -translate-y-1/2 bg-[#c2e886]/30" /></span><span>{label}<small className="ml-2 font-mono text-[8px] tracking-[0.08em] text-[#ebe8df]/35">{handle}</small></span></span><span className="flex items-center gap-2"><i className="h-px w-4 bg-[#ebe8df]/15 transition-all duration-200 group-hover:w-7 group-hover:bg-[#c2e886]/50" /><span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#c2e886]">↗</span></span></a>)}
             </nav>
           </div>
         </section>
       )}
 
       {stage !== "profile" && (
-        <section className={`calibration fixed inset-0 z-20 bg-[#11110f] ${stage === "opening" ? "is-opening" : ""}`} data-ready={stage === "ready"}>
+        <section
+          className={`calibration fixed inset-0 z-20 bg-[#11110f] ${stage === "ready" ? "is-ready" : ""} ${stage === "opening" ? "is-opening" : ""} ${stage === "ready" ? "cursor-pointer" : "cursor-wait"}`}
+          data-ready={stage === "ready"}
+          onClick={openProfile}
+          onKeyDown={(event) => { if (stage === "ready" && (event.key === "Enter" || event.key === " ")) openProfile(); }}
+          role="button"
+          tabIndex={stage === "ready" ? 0 : -1}
+          aria-label={stage === "ready" ? "Calibration complete. Click anywhere to enter." : "Calibration in progress."}
+        >
           <div className="calibration-chrome absolute left-6 top-6 font-mono text-[9px] tracking-[0.16em] text-[#ebe8df]/42 sm:left-10 sm:top-9">MYK.RWT / STILLROOM</div>
           <div className="calibration-chrome absolute right-6 top-6 font-mono text-[9px] tracking-[0.14em] text-[#ebe8df]/42 sm:right-10 sm:top-9">CALIBRATION / 01</div>
           <div className="calibration-chrome absolute bottom-6 left-6 font-mono text-[8px] tracking-[0.14em] text-[#ebe8df]/32 sm:bottom-9 sm:left-10">FRAME: 600 × 600</div>
-          <div className="calibration-chrome absolute bottom-6 right-6 font-mono text-[8px] tracking-[0.14em] text-[#ebe8df]/32 sm:bottom-9 sm:right-10">STATUS: ALIGNING</div>
+          <div className={`calibration-chrome absolute bottom-6 right-6 font-mono text-[8px] tracking-[0.14em] sm:bottom-9 sm:right-10 ${stage === "ready" ? "text-[#c2e886]" : "text-[#ebe8df]/32"}`}>STATUS: {stage === "ready" ? "COMPLETE" : "ALIGNING"}</div>
           <div className="room-core absolute left-1/2 top-1/2 h-[min(88vw,660px)] w-[min(88vw,660px)] min-h-[320px] min-w-[320px] -translate-x-1/2 -translate-y-1/2 text-[#ebe8df]/95">
             <StillroomCore />
           </div>
-          {stage === "ready" && <button type="button" onClick={openProfile} className="enter-control absolute bottom-[13%] left-1/2 -translate-x-1/2 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/68 transition-colors hover:text-[#ebe8df]">enter</button>}
+          <div className="calibration-status absolute bottom-[12%] left-1/2 -translate-x-1/2 text-center">
+            {stage === "calibrating" ? <><span className="mx-auto mb-3 block h-px w-20 overflow-hidden bg-[#ebe8df]/12"><i className="calibration-progress block h-px bg-[#c2e886]" /></span><span className="font-mono text-[9px] tracking-[0.18em] text-[#ebe8df]/42">CALIBRATING SYSTEM</span></> : <><span className="mx-auto mb-3 flex h-5 w-5 items-center justify-center rounded-full border border-[#c2e886] text-[10px] text-[#c2e886]">+</span><span className="enter-control block font-mono text-[10px] tracking-[0.22em] text-[#c2e886]">READY — CLICK ANYWHERE TO ENTER</span></>}
+          </div>
         </section>
       )}
     </main>

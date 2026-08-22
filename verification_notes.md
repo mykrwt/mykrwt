@@ -23,3 +23,7 @@ The revised live loader begins with only the arch, confirming there is no comple
 ## Stillroom Verification
 
 The fresh loader is a standalone Stillroom calibration chamber rather than a sigil. At rest it presents the large suspended optical sphere, three offset wireframe planes, orbit markers, a scan beam, coordinate labels, and an `enter` cue. The live browser confirms that these elements are visible together on the dark deep-paper ground before interaction.
+
+## Social Links and Explicit Entry Verification
+
+The loader now begins with `STATUS: ALIGNING` and a visible `CALIBRATING SYSTEM` progress line. Once the calibration duration completes, the display changes to `STATUS: COMPLETE` and `READY — CLICK ANYWHERE TO ENTER`; the full loader section becomes keyboard- and pointer-accessible as the entry trigger only in this completed state.

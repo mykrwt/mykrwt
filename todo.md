@@ -62,3 +62,10 @@
 - [x] Establish a new clean, detailed loading composition with one coherent visual system.
 - [x] Implement sophisticated but restrained motion and a simple reveal into the profile.
 - [x] Verify the new loading experience across desktop and mobile sizes.
+
+# Social Links and Explicit Entry
+
+- [x] Replace the sample social destinations with the user’s Instagram, Discord, YouTube, X, and GitHub links.
+- [x] Add a clear calibration-complete status and visual ready indicator after the loading motion finishes.
+- [x] Enable click-anywhere entry only once the Stillroom loader is ready.
+- [x] Verify the completed state, entry interaction, and updated social links across desktop and mobile sizes.
