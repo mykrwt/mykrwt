@@ -66,3 +66,9 @@
 # Confirmed Main Replacement
 
 - [x] Replace the existing GitHub `main` branch with the current project commit, as explicitly approved by the user.
+
+# Vercel Static Deployment
+
+- [x] Configure a Vercel static build that does not rely on the Express server entry.
+- [x] Add a single-page-app route fallback for Vercel hosting.
+- [x] Validate the static output and push the Vercel-ready update to GitHub.
