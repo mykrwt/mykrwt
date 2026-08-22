@@ -57,3 +57,12 @@
 - [x] Complete the current loading composition with an intentional resting structure and clear entry readiness.
 - [x] Refine the visual finish without replacing the existing crest, door, sound, or profile interactions.
 - [x] Verify the complete loading state and existing entry handoff across desktop and mobile sizes.
+
+# GitHub Push
+
+- [ ] Commit the current project state and push it to the connected GitHub repository.
+- [ ] Confirm the remote branch contains the pushed commit.
+
+# Confirmed Main Replacement
+
+- [ ] Replace the existing GitHub `main` branch with the current project commit, as explicitly approved by the user.
