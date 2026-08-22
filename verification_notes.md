@@ -5,3 +5,7 @@ The restored e52d74fd entry was tested with the focused transition refinement. A
 ## Door Sound and Smoothness Verification
 
 The enhanced transition remains user-gesture initiated. The entry click starts the quiet synthesized door sound and the extended 3D door movement together; the door leaves swing away with smoother timing before the existing profile is revealed.
+
+## Post-Door Social Reveal Verification
+
+The entry transition was re-tested after the link animation update. The door leaves still initiate and move independently before the profile mounts; the social-link reveal is delayed from the profile handoff rather than beginning during the gate motion.

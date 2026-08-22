@@ -67,6 +67,7 @@ button:not(:disabled), a[href] { cursor: pointer; }
 @keyframes arrive-click { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes mark-breathe { 0%,100% { transform: scale(1) rotate(-.35deg); } 50% { transform: scale(1.035) rotate(.35deg); } }
 @keyframes page-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes social-arrive { 0% { opacity: 0; transform: translateY(10px); text-shadow: 0 0 0 transparent; } 52% { opacity: 1; transform: translateY(0); text-shadow: 0 0 15px rgb(235 232 223 / 42%), 0 0 30px rgb(235 232 223 / 16%); } 100% { opacity: 1; transform: translateY(0); text-shadow: 0 0 0 transparent; } }
 
 .loader-stroke { stroke-dasharray: 500; stroke-dashoffset: 500; }
 .loader-stroke-static { opacity: .24; }
@@ -93,6 +94,7 @@ button:not(:disabled), a[href] { cursor: pointer; }
 .loader-stage.is-opening .gate-right::before { opacity: .52; transform: translateX(18%); }
 
 .minimal-page { animation: page-in 750ms cubic-bezier(.16,1,.3,1) both; }
+.social-link-reveal { opacity: 0; animation: social-arrive 780ms cubic-bezier(.16,1,.3,1) calc(540ms + var(--social-delay)) forwards; }
 .deep-paper { background-image: radial-gradient(rgb(235 232 223 / 8%) .55px, transparent .8px), radial-gradient(rgb(0 0 0 / 20%) .5px, transparent .7px); background-position: 0 0, 4px 4px; background-size: 8px 8px, 11px 11px; mix-blend-mode: soft-light; }
 
 @media (prefers-reduced-motion: reduce) {

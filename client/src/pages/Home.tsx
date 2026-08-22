@@ -2,7 +2,7 @@
  * MYK.RWT DESIGN REMINDER — Expanded Original Pattern: a large original orbital crest builds
  * in layered hand-drawn passes before click; the final page remains only name, bio, and links.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 type Stage = "ready" | "opening" | "profile";
 
@@ -114,7 +114,7 @@ export default function Home() {
             <h1 className="mt-6 text-[clamp(4.6rem,10vw,8.5rem)] font-semibold leading-[0.78] tracking-[-0.10em] text-[#f0eee7]">myk.rwt</h1>
             <p className="mt-7 max-w-[360px] text-[15px] leading-7 tracking-[-0.02em] text-[#ebe8df]/60 sm:text-base">making small things, collecting better questions, and spending too long on the details.</p>
             <nav className="mt-12 max-w-[420px] border-t border-[#ebe8df]/15" aria-label="Social links">
-              {links.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]">{label}<span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#ebe8df]/70">↗</span></a>)}
+              {links.map(({ label, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link-reveal group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]" style={{ "--social-delay": `${index * 130}ms` } as CSSProperties}>{label}<span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#ebe8df]/70">↗</span></a>)}
             </nav>
           </div>
         </section>

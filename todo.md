@@ -45,3 +45,9 @@
 - [x] Add a quiet user-gesture-safe door-opening sound that begins with the transition.
 - [x] Further smooth the split-door movement while preserving all other visual content.
 - [x] Verify the synchronized sound and completed door reveal.
+
+# Post-Door Social Reveal
+
+- [x] Fade in the existing social links sequentially after the doors fully open.
+- [x] Add a restrained, short-lived glow that preserves the current minimal visual language.
+- [x] Verify the link reveal timing and the unchanged door transition.
