@@ -1,6 +1,6 @@
 /**
- * MYK.RWT DESIGN REMINDER — Expanded Original Pattern: a large original orbital crest builds
- * in layered hand-drawn passes before click; the final page remains only name, bio, and links.
+ * MYK.RWT DESIGN REMINDER — Completed Crest: a fully closed original talisman line pattern
+ * draws slowly in five phases; the revealed same-color page stays only name, bio, and links.
  */
 import { useEffect, useState } from "react";
 
@@ -13,33 +13,43 @@ const links = [
   { label: "email", href: "mailto:hello@myk.rwt" },
 ];
 
-function CrestPaths({ animated = false }: { animated?: boolean }) {
-  const classFor = (pass: string) => animated ? `loader-stroke ${pass}` : "loader-stroke-static";
+function CrestArtwork({ animated = false }: { animated?: boolean }) {
+  const line = (pass: string) => animated ? `crest-line ${pass}` : "crest-line-static";
+  const dot = (pass: string) => animated ? `crest-dot ${pass}` : "crest-dot-static";
+
   return (
     <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-      <path className={classFor("loader-stroke-one")} d="M250 36C215 106 152 120 65 87c49 58 56 112 14 163 76-23 132 1 171 63 39-62 95-86 171-63-42-51-35-105 14-163-87 33-150 19-185-51Z" strokeWidth="2.1" />
-      <path className={classFor("loader-stroke-one")} d="M250 464c35-70 98-84 185-51-49-58-56-112-14-163-76 23-132-1-171-63-39 62-95 86-171 63 42 51 35 105-14 163 87-33 150-19 185 51Z" strokeWidth="1.7" />
-      <path className={classFor("loader-stroke-two")} d="M250 96c-34 54-73 77-117 70 11 46 1 83-32 112 41 8 68 33 81 75 25-27 48-37 68-31 20-6 43 4 68 31 13-42 40-67 81-75-33-29-43-66-32-112-44 7-83-16-117-70Z" strokeWidth="1.5" />
-      <path className={classFor("loader-stroke-two")} d="M112 184c59-5 100 18 138 66 38-48 79-71 138-66-31 43-36 83-14 120-47-4-84 15-124 54-40-39-77-58-124-54 22-37 17-77-14-120Z" strokeWidth="1.2" />
-      <path className={classFor("loader-stroke-three")} d="M250 66v368M66 250h368M118 118l132 132 132-132M118 382l132-132 132 132" strokeWidth=".9" />
-      <path className={classFor("loader-stroke-three")} d="M102 250c33-27 60-36 80-28 24 9 34 34 30 75m156-47c-33 27-60 36-80 28-24-9-34-34-30-75M250 102c27 33 36 60 28 80-9 24-34 34-75 30m47 156c-27-33-36-60-28-80 9-24 34-34 75-30" strokeWidth="1.05" />
-      <circle className={classFor("loader-stroke-four")} cx="250" cy="250" r="110" strokeWidth=".85" strokeDasharray="2 10" />
-      <circle className={classFor("loader-stroke-four")} cx="250" cy="250" r="154" strokeWidth=".7" strokeDasharray="3 14" />
-      <circle className={classFor("loader-stroke-four")} cx="250" cy="250" r="10" strokeWidth="1.1" />
-      <circle cx="250" cy="250" r="3.8" fill="currentColor" stroke="none" />
-      <circle cx="250" cy="96" r="3.3" fill="currentColor" stroke="none" />
-      <circle cx="404" cy="250" r="3.3" fill="currentColor" stroke="none" />
-      <circle cx="250" cy="404" r="3.3" fill="currentColor" stroke="none" />
-      <circle cx="96" cy="250" r="3.3" fill="currentColor" stroke="none" />
+      <path className={line("crest-pass-one")} d="M250 22C278 68 320 86 365 70c-16 48 3 86 54 108-44 30-54 70-28 116-50-5-85 16-101 60-25-37-55-37-80 0-16-44-51-65-101-60 26-46 16-86-28-116 51-22 70-60 54-108 45 16 87-2 115-48Z" strokeWidth="2.35" />
+      <path className={line("crest-pass-one")} d="M250 478c-28-46-70-64-115-48 16-48-3-86-54-108 44-30 54-70 28-116 50 5 85-16 101-60 25 37 55 37 80 0 16 44 51 65 101 60-26 46-16 86 28 116-51 22-70 60-54 108-45-16-87 2-115 48Z" strokeWidth="1.75" />
+
+      <path className={line("crest-pass-two")} d="M250 94c32 37 57 51 92 48-7 34 6 61 38 82-35 7-57 29-66 65-23-24-43-30-64-19-21-11-41-5-64 19-9-36-31-58-66-65 32-21 45-48 38-82 35 3 60-11 92-48Z" strokeWidth="1.55" />
+      <path className={line("crest-pass-two")} d="M250 406c-32-37-57-51-92-48 7-34-6-61-38-82 35-7 57-29 66-65 23 24 43 30 64 19 21 11 41 5 64-19 9 36 31 58 66 65-32 21-45 48-38 82-35-3-60 11-92 48Z" strokeWidth="1.2" />
+
+      <path className={line("crest-pass-three")} d="M250 250c-1-51 17-90 55-116 11 43 1 78-30 106 34-12 66-9 98 12-34 18-66 21-98 9 31 28 41 63 30 105-38-26-56-65-55-116Z" strokeWidth="1.25" />
+      <path className={line("crest-pass-three")} d="M250 250c51-1 90 17 116 55-43 11-78 1-106-30 12 34 9 66-12 98-18-34-21-66-9-98-28 31-63 41-105 30 26-38 65-56 116-55Z" strokeWidth="1.1" />
+      <path className={line("crest-pass-three")} d="M250 250c1 51-17 90-55 116-11-43-1-78 30-106-34 12-66 9-98-12 34-18 66-21 98-9-31-28-41-63-30-105 38 26 56 65 55 116Z" strokeWidth=".95" />
+      <path className={line("crest-pass-three")} d="M250 250c-51 1-90-17-116-55 43-11 78-1 106 30-12-34-9-66 12-98 18 34 21 66 9 98 28-31 63-41 105-30-26 38-65 56-116 55Z" strokeWidth=".85" />
+      <path className={line("crest-pass-three")} d="M250 192c18 18 23 38 15 58 20-8 40-3 58 15-18 18-38 23-58 15 8 20 3 40-15 58-18-18-23-38-15-58-20 8-40 3-58-15 18-18 38-23 58-15-8-20-3-40 15-58Z" strokeWidth="1.15" />
+
+      <circle className={line("crest-pass-four")} cx="250" cy="250" r="132" strokeWidth=".9" strokeDasharray="2 10" />
+      <circle className={line("crest-pass-four")} cx="250" cy="250" r="168" strokeWidth=".7" strokeDasharray="3 13" />
+      <path className={line("crest-pass-four")} d="M250 54v392M54 250h392M112 112l276 276M388 112 112 388" strokeWidth=".72" opacity=".8" />
+
+      <circle className={dot("crest-pass-five")} cx="250" cy="250" r="8" strokeWidth="1.2" />
+      <circle className={dot("crest-pass-five")} cx="250" cy="55" r="4" fill="currentColor" stroke="none" />
+      <circle className={dot("crest-pass-five")} cx="445" cy="250" r="4" fill="currentColor" stroke="none" />
+      <circle className={dot("crest-pass-five")} cx="250" cy="445" r="4" fill="currentColor" stroke="none" />
+      <circle className={dot("crest-pass-five")} cx="55" cy="250" r="4" fill="currentColor" stroke="none" />
+      <path className={line("crest-pass-five")} d="M250 72l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13ZM428 250l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13ZM250 428l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13ZM72 250l5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13Z" strokeWidth=".8" />
     </g>
   );
 }
 
-function OriginalCrest() {
+function CompletedCrest() {
   return (
     <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="loader-mark h-full w-full overflow-visible" aria-hidden="true">
-      <g opacity=".23"><CrestPaths /></g>
-      <CrestPaths animated />
+      <g opacity=".24"><CrestArtwork /></g>
+      <CrestArtwork animated />
     </svg>
   );
 }
@@ -47,9 +57,9 @@ function OriginalCrest() {
 function MiniMark() {
   return (
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#ebe8df]/54" aria-hidden="true">
-      <path d="M5 16c3-7 8-10 12-10 5 0 8 3 10 9-4-3-8-3-11-1-3 1-5 4-7 8-2-2-3-4-4-6ZM9 24c3-4 6-6 9-6 3 0 5 2 7 6-3-1-5-1-7 0-2 1-4 3-6 5l-3-5Z" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M16 4v24M4 16h24" stroke="currentColor" strokeWidth=".9" strokeLinecap="round" />
-      <circle cx="16" cy="16" r="1.7" fill="currentColor" />
+      <path d="M16 3c3 5 7 6 11 4-1 5 1 8 4 10-4 2-5 5-3 9-5-1-8 1-10 4-2-3-5-3-8 0-2-3-5-5-10-4 2-4 1-7-3-9 3-2 5-5 4-10 4 2 8 1 11-4Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 7v18M7 16h18M10 10l12 12M22 10 10 22" stroke="currentColor" strokeWidth=".55" strokeLinecap="round" />
+      <circle cx="16" cy="16" r="1.6" fill="currentColor" />
     </svg>
   );
 }
@@ -59,7 +69,7 @@ export default function Home() {
 
   useEffect(() => {
     if (stage !== "opening") return;
-    const timer = window.setTimeout(() => setStage("profile"), 1120);
+    const timer = window.setTimeout(() => setStage("profile"), 1250);
     return () => window.clearTimeout(timer);
   }, [stage]);
 
@@ -76,7 +86,7 @@ export default function Home() {
             <h1 className="mt-6 text-[clamp(4.6rem,10vw,8.5rem)] font-semibold leading-[0.78] tracking-[-0.10em] text-[#f0eee7]">myk.rwt</h1>
             <p className="mt-7 max-w-[360px] text-[15px] leading-7 tracking-[-0.02em] text-[#ebe8df]/60 sm:text-base">making small things, collecting better questions, and spending too long on the details.</p>
             <nav className="mt-12 max-w-[420px] border-t border-[#ebe8df]/15" aria-label="Social links">
-              {links.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]">{label}<span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#ebe8df]/70">↗</span></a>)}
+              {links.map(({ label, href }, index) => <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-[#ebe8df]/15 py-4 text-sm font-medium tracking-[-0.025em] text-[#ebe8df]/82 transition-all duration-200 hover:pl-2 hover:text-[#f0eee7]"><span className="flex items-center gap-3"><span className="relative font-mono text-[8px] tracking-[0.1em] text-[#ebe8df]/32">0{index + 1}<i className="absolute left-[9px] top-1/2 h-px w-3 -translate-y-1/2 rotate-[-28deg] bg-[#ebe8df]/25" /></span>{label}</span><span className="flex items-center gap-2"><i className="h-px w-4 bg-[#ebe8df]/15 transition-all duration-200 group-hover:w-7 group-hover:bg-[#ebe8df]/42" /><span className="font-mono text-[11px] text-[#ebe8df]/30 transition-all duration-200 group-hover:text-[#ebe8df]/70">↗</span></span></a>)}
             </nav>
           </div>
         </section>
@@ -85,8 +95,8 @@ export default function Home() {
       {stage !== "profile" && (
         <section className={`loader-stage fixed inset-0 z-20 grid place-items-center bg-[#12120f] text-[#ebe8df] ${stage === "opening" ? "is-opening" : ""}`} data-ready={stage === "ready"}>
           <div className="relative z-10 flex flex-col items-center">
-            <button type="button" onClick={openProfile} className="h-[min(76vw,480px)] w-[min(76vw,480px)] min-h-[250px] min-w-[250px] text-[#ebe8df]/85 transition-transform duration-500 hover:scale-[1.025] active:scale-95" aria-label="Open myk.rwt"><OriginalCrest /></button>
-            {stage === "ready" && <button type="button" onClick={openProfile} className="click-control mt-7 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/62 transition-colors hover:text-[#ebe8df]">click</button>}
+            <button type="button" onClick={openProfile} className="h-[min(78vw,510px)] w-[min(78vw,510px)] min-h-[260px] min-w-[260px] text-[#ebe8df]/87 transition-transform duration-500 hover:scale-[1.018] active:scale-95" aria-label="Open myk.rwt"><CompletedCrest /></button>
+            {stage === "ready" && <button type="button" onClick={openProfile} className="click-control mt-8 font-mono text-[10px] lowercase tracking-[0.28em] text-[#ebe8df]/62 transition-colors hover:text-[#ebe8df]">click</button>}
           </div>
           <div className="gate-leaf gate-left opacity-0" />
           <div className="gate-leaf gate-right opacity-0" />

@@ -104,3 +104,13 @@ The page remains one continuous deep-paper color. The original mark draws itself
 The loader’s original mark now expands into a larger **hand-drawn orbital crest**: a symmetric-but-imperfect composition with four curved wings, nested contour loops, hairline cross routes, dotted orbit rings, and a small central core. It remains entirely original coded linework and does not reproduce the uploaded reference.
 
 The pattern should be the only spectacle. It forms in four measured passes—outer wings, inner loops, connecting route lines, then dots and core—before the `click` cue appears. Once open, it leaves no trace beyond the existing small logo echo; the name, bio, and links page remains unchanged.
+
+## Style Decisions — Completed Crest Refinement
+
+The next crest must read as a **finished talisman**, not a set of paths still being assembled. The outer silhouette will close into a balanced eight-point organic frame. Inside it, four mirrored petal chambers, a nested central rosette, double orbit rings, and small endpoint stars will give the pattern a deliberate visual resolution.
+
+The animation slows into five quiet phases. It begins with the outer frame, follows with mirrored chambers, nests the central rosette, settles the orbit rings and stars, and lets the completed crest breathe for a moment before `click` fades in. The entire composition remains original hand-coded SVG linework and never draws from the supplied reference image.
+
+### Applied Completion Amendments
+
+The root route must always retain the finished talisman in a visible resting state with the `click` cue, even before the staged drawing completes. The final page keeps its spare deep-paper field but uses a talisman-derived route glyph beside Mayank Rawat and quiet indexed link routes so its minimal typography and interaction language remain recognizably part of the same handmade system.

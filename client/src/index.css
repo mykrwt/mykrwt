@@ -70,12 +70,13 @@ button:not(:disabled), a[href] { cursor: pointer; }
 
 .loader-stroke { stroke-dasharray: 500; stroke-dashoffset: 500; }
 .loader-stroke-static { opacity: .24; }
-.loader-stage[data-ready="true"] .loader-stroke-one { animation: draw-shape 760ms cubic-bezier(.16,1,.3,1) 80ms forwards; }
-.loader-stage[data-ready="true"] .loader-stroke-two { animation: draw-shape 850ms cubic-bezier(.16,1,.3,1) 420ms forwards; }
-.loader-stage[data-ready="true"] .loader-stroke-three { animation: draw-shape 900ms cubic-bezier(.16,1,.3,1) 790ms forwards; }
-.loader-stage[data-ready="true"] .loader-stroke-four { animation: draw-shape 780ms cubic-bezier(.16,1,.3,1) 1190ms forwards; }
-.loader-stage[data-ready="true"] .loader-mark { animation: mark-breathe 8s ease-in-out 1940ms infinite; }
-.loader-stage[data-ready="true"] .click-control { animation: arrive-click 450ms cubic-bezier(.16,1,.3,1) 1960ms both; }
+.loader-stage[data-ready="true"] .crest-pass-one { animation: draw-shape 1050ms cubic-bezier(.16,1,.3,1) 100ms forwards; }
+.loader-stage[data-ready="true"] .crest-pass-two { animation: draw-shape 1100ms cubic-bezier(.16,1,.3,1) 840ms forwards; }
+.loader-stage[data-ready="true"] .crest-pass-three { animation: draw-shape 1250ms cubic-bezier(.16,1,.3,1) 1630ms forwards; }
+.loader-stage[data-ready="true"] .crest-pass-four { animation: draw-shape 1050ms cubic-bezier(.16,1,.3,1) 2520ms forwards; }
+.loader-stage[data-ready="true"] .crest-pass-five { animation: draw-shape 900ms cubic-bezier(.16,1,.3,1) 3280ms forwards; }
+.loader-stage[data-ready="true"] .loader-mark { animation: mark-breathe 10s ease-in-out 4180ms infinite; }
+.loader-stage[data-ready="true"] .click-control { animation: arrive-click 520ms cubic-bezier(.16,1,.3,1) 4320ms both; }
 
 .gate-leaf { position: absolute; top: 0; bottom: 0; width: 50.15%; background: #191915; box-shadow: inset 0 0 0 1px rgb(235 232 223 / 7%), inset 0 0 38px rgb(0 0 0 / 26%); transition: transform 900ms cubic-bezier(.77,0,.175,1), opacity 180ms linear; }
 .gate-left { left: 0; transform-origin: left center; }
