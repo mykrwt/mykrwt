@@ -59,7 +59,7 @@ export default function Home() {
 
   useEffect(() => {
     if (stage !== "opening") return;
-    const timer = window.setTimeout(() => setStage("profile"), 1120);
+    const timer = window.setTimeout(() => setStage("profile"), 1320);
     return () => window.clearTimeout(timer);
   }, [stage]);
 

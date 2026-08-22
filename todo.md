@@ -34,3 +34,8 @@
 - [x] Stage the pattern in several smooth drawing passes before revealing the `click` prompt.
 - [x] Preserve the current minimalist name, bio, and links page unchanged.
 - [x] Verify the enhanced pattern and transition across desktop and mobile sizes.
+
+# Focused Door Motion Update
+
+- [x] Refine only the split-door transition with more physical opening depth and timing.
+- [x] Confirm the revised animation opens cleanly into the existing profile without altering other elements.
